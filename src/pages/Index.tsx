@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
+import SidebarNav from "@/components/SidebarNav";
 import HeroSection from "@/components/HeroSection";
 import ProgramSection from "@/components/ProgramSection";
 import CurriculumSection from "@/components/CurriculumSection";
@@ -34,8 +34,11 @@ const Index = () => {
       </Helmet>
 
       <div className="min-h-screen bg-background">
-        <Navbar />
-        <main>
+        {/* Sidebar Navigation - Desktop */}
+        <SidebarNav />
+        
+        {/* Main Content - with left margin for sidebar on desktop */}
+        <main className="lg:ml-56 transition-all duration-300">
           <HeroSection />
           <ProgramSection />
           <CurriculumSection />
@@ -45,8 +48,8 @@ const Index = () => {
           <PricingSection />
           <PromoSection />
           <FAQSection />
+          <Footer />
         </main>
-        <Footer />
       </div>
     </>
   );

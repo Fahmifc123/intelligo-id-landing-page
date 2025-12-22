@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-mentor.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-background overflow-hidden">
+    <section id="hero" className="pt-16 md:pt-24 pb-16 md:pb-24 bg-background overflow-hidden">
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}

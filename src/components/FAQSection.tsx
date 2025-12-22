@@ -35,7 +35,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="section-padding bg-secondary/30">
+    <section id="faq" className="section-padding bg-secondary/30">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
