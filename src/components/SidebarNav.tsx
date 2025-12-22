@@ -10,7 +10,8 @@ import {
   Gift, 
   HelpCircle,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Briefcase
 } from "lucide-react";
 
 const SidebarNav = () => {
@@ -21,6 +22,7 @@ const SidebarNav = () => {
     { id: "hero", label: "Beranda", icon: Home },
     { id: "program", label: "Program", icon: GraduationCap },
     { id: "curriculum", label: "Kurikulum", icon: BookOpen },
+    { id: "career", label: "Karier", icon: Briefcase },
     { id: "testimoni", label: "Testimoni", icon: MessageSquare },
     { id: "stats", label: "Pencapaian", icon: BarChart3 },
     { id: "mentor", label: "Mentor", icon: Users },
