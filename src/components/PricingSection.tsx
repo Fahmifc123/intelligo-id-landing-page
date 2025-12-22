@@ -347,12 +347,12 @@ const PricingSection = () => {
         )}
 
         {/* Carousel Container */}
-        <div className="relative">
+        <div className="relative px-4 md:px-16">
           {/* Navigation Buttons */}
           <button
             onClick={scrollPrev}
             disabled={!canScrollPrev}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border flex items-center justify-center transition-all duration-200 ${
+            className={`hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border items-center justify-center transition-all duration-200 ${
               canScrollPrev
                 ? "hover:bg-accent hover:text-accent-foreground"
                 : "opacity-50 cursor-not-allowed"
@@ -364,7 +364,7 @@ const PricingSection = () => {
           <button
             onClick={scrollNext}
             disabled={!canScrollNext}
-            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border flex items-center justify-center transition-all duration-200 ${
+            className={`hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border items-center justify-center transition-all duration-200 ${
               canScrollNext
                 ? "hover:bg-accent hover:text-accent-foreground"
                 : "opacity-50 cursor-not-allowed"
@@ -374,8 +374,9 @@ const PricingSection = () => {
           </button>
 
           {/* Carousel */}
-          <div className="overflow-hidden mx-6" ref={emblaRef}>
-            <div className="flex gap-6">
+          <div className="overflow-hidden -mx-1">
+            <div className="overflow-visible px-1" ref={emblaRef}>
+              <div className="flex gap-6 py-6">
               {currentCategory?.plans.map((plan, index) => (
                 <div
                   key={`${activeCategory}-${plan.name}`}
@@ -441,6 +442,7 @@ const PricingSection = () => {
                   </div>
                 </div>
               ))}
+              </div>
             </div>
           </div>
         </div>
