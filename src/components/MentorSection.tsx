@@ -59,18 +59,18 @@ const mentors = [
 ];
 
 const mentorCompanies = [
-  { name: "Tokopedia", image: "https://logo.clearbit.com/tokopedia.com" },
-  { name: "Gojek", image: "https://logo.clearbit.com/gojek.com" },
-  { name: "Shopee", image: "https://logo.clearbit.com/shopee.co.id" },
-  { name: "Traveloka", image: "https://logo.clearbit.com/traveloka.com" },
-  { name: "Microsoft", image: "https://logo.clearbit.com/microsoft.com" },
-  { name: "Google", image: "https://logo.clearbit.com/google.com" },
-  { name: "Amazon", image: "https://logo.clearbit.com/amazon.com" },
-  { name: "Meta", image: "https://logo.clearbit.com/meta.com" },
-  { name: "Grab", image: "https://logo.clearbit.com/grab.com" },
-  { name: "Bukalapak", image: "https://logo.clearbit.com/bukalapak.com" },
-  { name: "Telkom", image: "https://logo.clearbit.com/telkom.co.id" },
-  { name: "Bank Mandiri", image: "https://logo.clearbit.com/bankmandiri.co.id" },
+  { name: "Tokopedia", key: "tokopedia" as const },
+  { name: "Gojek", key: "gojek" as const },
+  { name: "Shopee", key: "shopee" as const },
+  { name: "Traveloka", key: "traveloka" as const },
+  { name: "Microsoft", key: "microsoft" as const },
+  { name: "Google", key: "google" as const },
+  { name: "Amazon", key: "amazon" as const },
+  { name: "Meta", key: "meta" as const },
+  { name: "Grab", key: "grab" as const },
+  { name: "Bukalapak", key: "bukalapak" as const },
+  { name: "Telkom", key: "telkom" as const },
+  { name: "Bank Mandiri", key: "mandiri" as const },
 ];
 
 const MentorSection = () => {
