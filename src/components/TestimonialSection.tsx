@@ -132,18 +132,18 @@ const testimonials: Testimonial[] = [
 ];
 
 const alumniCompanies = [
-  "Tokopedia",
-  "Gojek",
-  "Shopee",
-  "Traveloka",
-  "Bukalapak",
-  "OVO",
-  "Dana",
-  "Grab",
-  "Blibli",
-  "Tiket.com",
-  "Telkom",
-  "Bank BCA",
+  { name: "Tokopedia", image: "https://logo.clearbit.com/tokopedia.com" },
+  { name: "Gojek", image: "https://logo.clearbit.com/gojek.com" },
+  { name: "Shopee", image: "https://logo.clearbit.com/shopee.co.id" },
+  { name: "Traveloka", image: "https://logo.clearbit.com/traveloka.com" },
+  { name: "Bukalapak", image: "https://logo.clearbit.com/bukalapak.com" },
+  { name: "OVO", image: "https://logo.clearbit.com/ovo.id" },
+  { name: "Dana", image: "https://logo.clearbit.com/dana.id" },
+  { name: "Grab", image: "https://logo.clearbit.com/grab.com" },
+  { name: "Blibli", image: "https://logo.clearbit.com/blibli.com" },
+  { name: "Tiket.com", image: "https://logo.clearbit.com/tiket.com" },
+  { name: "Telkom", image: "https://logo.clearbit.com/telkom.co.id" },
+  { name: "BCA", image: "https://logo.clearbit.com/bca.co.id" },
 ];
 
 const TestimonialSection = () => {
