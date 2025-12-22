@@ -250,3 +250,22 @@
 .animation-delay-500 {
   animation-delay: 500ms;
 }
+
+/* Infinite scroll animations for logo carousel */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
