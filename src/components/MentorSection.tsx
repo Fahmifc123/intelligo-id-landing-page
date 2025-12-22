@@ -1,8 +1,11 @@
+import { useState, useCallback, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import mentor1 from "@/assets/mentor-1.jpg";
 import mentor2 from "@/assets/mentor-2.jpg";
 import mentor3 from "@/assets/mentor-3.jpg";
 import mentor4 from "@/assets/mentor-4.jpg";
 import LogoCarousel from "./LogoCarousel";
+import useEmblaCarousel from "embla-carousel-react";
 
 const mentors = [
   {
@@ -11,6 +14,7 @@ const mentors = [
     company: "Ex-Tokopedia",
     image: mentor1,
     experience: "8+ tahun pengalaman di industri data science dan machine learning.",
+    expertise: ["Python", "Machine Learning", "Deep Learning"],
   },
   {
     name: "Budi Santoso",
@@ -18,6 +22,7 @@ const mentors = [
     company: "Ex-Gojek",
     image: mentor2,
     experience: "Spesialis Python, SQL, dan data engineering di skala enterprise.",
+    expertise: ["Python", "SQL", "Data Engineering"],
   },
   {
     name: "Citra Lestari",
@@ -25,6 +30,7 @@ const mentors = [
     company: "Startup AI Jakarta",
     image: mentor3,
     experience: "Expert di NLP, Computer Vision, dan deployment ML models.",
+    expertise: ["NLP", "Computer Vision", "MLOps"],
   },
   {
     name: "Raka Nugraha",
@@ -32,6 +38,23 @@ const mentors = [
     company: "Tech Unicorn",
     image: mentor4,
     experience: "Fokus di NLP dan sentiment analysis untuk produk Indonesia.",
+    expertise: ["NLP", "Sentiment Analysis", "BERT"],
+  },
+  {
+    name: "Dewi Anggraeni",
+    role: "Data Analytics Manager",
+    company: "Ex-Shopee",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
+    experience: "10+ tahun pengalaman di business intelligence dan data analytics.",
+    expertise: ["Tableau", "Power BI", "SQL"],
+  },
+  {
+    name: "Hendra Wijaya",
+    role: "Senior ML Engineer",
+    company: "Ex-Traveloka",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
+    experience: "Spesialis recommendation system dan real-time ML deployment.",
+    expertise: ["TensorFlow", "PyTorch", "AWS"],
   },
 ];
 
@@ -51,6 +74,34 @@ const mentorCompanies = [
 ];
 
 const MentorSection = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true,
+    align: "start",
+    slidesToScroll: 1,
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
+  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+    return () => {
+      emblaApi.off("select", onSelect);
+      emblaApi.off("reInit", onSelect);
+    };
+  }, [emblaApi, onSelect]);
+
   return (
     <section id="mentor" className="section-padding bg-secondary/30">
       <div className="section-container">
@@ -77,34 +128,77 @@ const MentorSection = () => {
           />
         </div>
 
-        {/* Mentors Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {mentors.map((mentor, index) => (
-            <div
-              key={mentor.name}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              {/* Image */}
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={mentor.image}
-                  alt={mentor.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+        {/* Mentors Carousel */}
+        <div className="relative px-4 md:px-16">
+          {/* Navigation Buttons */}
+          <button
+            onClick={scrollPrev}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border items-center justify-center transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
 
-              {/* Content */}
-              <div className="p-5">
-                <h3 className="text-lg font-bold text-foreground">{mentor.name}</h3>
-                <p className="text-accent font-semibold text-sm">{mentor.role}</p>
-                <p className="text-muted-foreground text-sm mb-3">{mentor.company}</p>
-                <p className="text-sm text-muted-foreground/80 line-clamp-2">
-                  {mentor.experience}
-                </p>
-              </div>
+          <button
+            onClick={scrollNext}
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-card shadow-lg border border-border items-center justify-center transition-all duration-200 hover:bg-accent hover:text-accent-foreground"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+
+          {/* Carousel */}
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-6">
+              {mentors.map((mentor, index) => (
+                <div
+                  key={mentor.name}
+                  className="flex-shrink-0 w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-18px)]"
+                >
+                  <div className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 hover:-translate-y-1 border border-border/50 h-full">
+                    {/* Image */}
+                    <div className="aspect-square overflow-hidden relative">
+                      <img
+                        src={mentor.image}
+                        alt={mentor.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      {/* Expertise Tags */}
+                      <div className="absolute bottom-3 left-3 right-3 flex flex-wrap gap-1">
+                        {mentor.expertise.slice(0, 2).map((skill) => (
+                          <span 
+                            key={skill}
+                            className="px-2 py-0.5 bg-primary/80 text-primary-foreground text-xs rounded-full backdrop-blur-sm"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="p-5">
+                      <h3 className="text-lg font-bold text-foreground">{mentor.name}</h3>
+                      <p className="text-accent font-semibold text-sm">{mentor.role}</p>
+                      <p className="text-muted-foreground text-sm mb-3">{mentor.company}</p>
+                      <p className="text-sm text-muted-foreground/80 line-clamp-2">
+                        {mentor.experience}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+
+          {/* Mobile Navigation Dots */}
+          <div className="flex justify-center gap-2 mt-6 md:hidden">
+            {mentors.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => emblaApi?.scrollTo(idx)}
+                className="w-2 h-2 rounded-full bg-foreground/30 hover:bg-foreground/50 transition-colors"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
