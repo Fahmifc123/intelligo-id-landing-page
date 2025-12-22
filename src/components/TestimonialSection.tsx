@@ -1,4 +1,5 @@
 import { Star, Quote } from "lucide-react";
+import LogoCarousel from "./LogoCarousel";
 
 const testimonials = [
   {
@@ -24,13 +25,19 @@ const testimonials = [
   },
 ];
 
-const partners = [
+const alumniCompanies = [
   "Tokopedia",
   "Gojek",
   "Shopee",
   "Traveloka",
   "Bukalapak",
   "OVO",
+  "Dana",
+  "Grab",
+  "Blibli",
+  "Tiket.com",
+  "Telkom",
+  "Bank BCA",
 ];
 
 const TestimonialSection = () => {
@@ -79,23 +86,17 @@ const TestimonialSection = () => {
           ))}
         </div>
 
-        {/* Partners */}
+        {/* Alumni Companies Carousel */}
         <div className="text-center">
           <p className="text-sm text-primary-foreground/50 mb-6 uppercase tracking-wider">
             Alumni kami bekerja di
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
-            {partners.map((partner) => (
-              <div
-                key={partner}
-                className="px-6 py-3 bg-primary-foreground/5 rounded-lg border border-primary-foreground/10"
-              >
-                <span className="text-primary-foreground/70 font-semibold">
-                  {partner}
-                </span>
-              </div>
-            ))}
-          </div>
+          <LogoCarousel 
+            logos={alumniCompanies} 
+            direction="left" 
+            speed="normal"
+            variant="dark"
+          />
         </div>
       </div>
     </section>

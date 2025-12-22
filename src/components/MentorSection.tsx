@@ -2,6 +2,7 @@ import mentor1 from "@/assets/mentor-1.jpg";
 import mentor2 from "@/assets/mentor-2.jpg";
 import mentor3 from "@/assets/mentor-3.jpg";
 import mentor4 from "@/assets/mentor-4.jpg";
+import LogoCarousel from "./LogoCarousel";
 
 const mentors = [
   {
@@ -34,6 +35,21 @@ const mentors = [
   },
 ];
 
+const mentorCompanies = [
+  "Tokopedia",
+  "Gojek",
+  "Shopee",
+  "Traveloka",
+  "Microsoft",
+  "Google",
+  "Amazon",
+  "Meta",
+  "Grab",
+  "Bukalapak",
+  "Telkom",
+  "Bank Mandiri",
+];
+
 const MentorSection = () => {
   return (
     <section id="mentor" className="section-padding bg-secondary/30">
@@ -46,6 +62,19 @@ const MentorSection = () => {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Belajar langsung dari praktisi yang berpengalaman di perusahaan-perusahaan teknologi terkemuka.
           </p>
+        </div>
+
+        {/* Mentor Companies Carousel */}
+        <div className="mb-12">
+          <p className="text-center text-sm text-muted-foreground mb-6 uppercase tracking-wider">
+            Mentor kami berasal dari
+          </p>
+          <LogoCarousel 
+            logos={mentorCompanies} 
+            direction="right" 
+            speed="normal"
+            variant="light"
+          />
         </div>
 
         {/* Mentors Grid */}
