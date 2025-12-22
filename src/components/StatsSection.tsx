@@ -25,7 +25,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section id="aktivitas" className="section-padding bg-background">
+    <section id="stats" className="section-padding bg-background">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">

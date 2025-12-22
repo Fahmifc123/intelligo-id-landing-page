@@ -40,7 +40,7 @@ const PromoSection = () => {
   const formatNumber = (num: number) => String(num).padStart(2, "0");
 
   return (
-    <section className="section-padding bg-primary">
+    <section id="promo" className="section-padding bg-primary">
       <div className="section-container">
         <div className="text-center">
           {/* Icon */}

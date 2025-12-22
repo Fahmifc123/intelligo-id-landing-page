@@ -46,7 +46,7 @@ const CurriculumSection = () => {
   const activeContent = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="section-padding bg-background">
+    <section id="curriculum" className="section-padding bg-background">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
