@@ -1,7 +1,13 @@
 import { useState } from "react";
 
+interface Logo {
+  name: string;
+  image?: string;
+  color?: string;
+}
+
 interface LogoCarouselProps {
-  logos: string[];
+  logos: Logo[];
   direction?: "left" | "right";
   speed?: "slow" | "normal" | "fast";
   className?: string;
@@ -57,22 +63,31 @@ const LogoCarousel = ({
       >
         {duplicatedLogos.map((logo, index) => (
           <div
-            key={`${logo}-${index}`}
-            className={`flex-shrink-0 px-6 py-3 rounded-lg border transition-all duration-300 cursor-pointer hover:scale-105 ${
+            key={`${logo.name}-${index}`}
+            className={`flex-shrink-0 px-6 py-4 rounded-xl border transition-all duration-300 cursor-pointer hover:scale-105 flex items-center justify-center min-w-[140px] h-16 ${
               variant === "dark"
-                ? "bg-primary-foreground/5 border-primary-foreground/10 hover:bg-primary-foreground/15 hover:border-primary-foreground/30"
-                : "bg-card border-border/50 hover:bg-accent/10 hover:border-accent/30 shadow-sm"
+                ? "bg-primary-foreground/10 border-primary-foreground/20 hover:bg-primary-foreground/20 hover:border-primary-foreground/40"
+                : "bg-card border-border hover:bg-accent/10 hover:border-accent/30 shadow-sm"
             }`}
           >
-            <span
-              className={`font-semibold whitespace-nowrap transition-colors duration-300 ${
-                variant === "dark"
-                  ? "text-primary-foreground/70 group-hover:text-primary-foreground"
-                  : "text-foreground/70 group-hover:text-accent"
-              }`}
-            >
-              {logo}
-            </span>
+            {logo.image ? (
+              <img 
+                src={logo.image} 
+                alt={logo.name}
+                className="h-8 w-auto object-contain max-w-[100px]"
+              />
+            ) : (
+              <span
+                className={`font-bold text-lg whitespace-nowrap ${
+                  variant === "dark"
+                    ? "text-primary-foreground"
+                    : "text-foreground"
+                }`}
+                style={{ color: logo.color }}
+              >
+                {logo.name}
+              </span>
+            )}
           </div>
         ))}
       </div>
