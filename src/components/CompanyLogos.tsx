@@ -1,4 +1,12 @@
-// Company logos as SVG components for crisp rendering
+// Company logos - using imported images where available, SVG fallback otherwise
+import grabLogo from "@/assets/logos/grab.png";
+
+// Logo images that have been uploaded
+export const logoImages: Record<string, string> = {
+  grab: grabLogo,
+};
+
+// SVG fallback logos for companies without uploaded images
 export const companyLogos = {
   tokopedia: () => (
     <svg viewBox="0 0 120 30" className="h-6 w-auto">
@@ -52,12 +60,7 @@ export const companyLogos = {
     </svg>
   ),
   grab: () => (
-    <svg viewBox="0 0 80 30" className="h-6 w-auto">
-      <circle cx="15" cy="15" r="12" fill="#00b14f"/>
-      <text x="32" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#00b14f">
-        Grab
-      </text>
-    </svg>
+    <img src={grabLogo} alt="Grab" className="h-6 w-auto object-contain" />
   ),
   blibli: () => (
     <svg viewBox="0 0 80 30" className="h-6 w-auto">
