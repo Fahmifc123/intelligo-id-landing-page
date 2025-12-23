@@ -1,96 +1,72 @@
-// Company logos - using imported images where available, SVG fallback otherwise
+// Company logos - using imported images
 import grabLogo from "@/assets/logos/grab.png";
+import tokopediaLogo from "@/assets/logos/tokopedia.png";
+import gojekLogo from "@/assets/logos/gojek.png";
+import shopeeLogo from "@/assets/logos/shopee.png";
+import travelokaLogo from "@/assets/logos/traveloka.png";
+import bukalapakLogo from "@/assets/logos/bukalapak.png";
+import ovoLogo from "@/assets/logos/ovo.png";
+import danaLogo from "@/assets/logos/dana.png";
+import blibliLogo from "@/assets/logos/blibli.png";
+import tiketcomLogo from "@/assets/logos/tiketcom.png";
+import telkomLogo from "@/assets/logos/telkom.png";
+import bcaLogo from "@/assets/logos/bca.png";
 
-// Logo images that have been uploaded
+// Logo images mapping
 export const logoImages: Record<string, string> = {
   grab: grabLogo,
+  tokopedia: tokopediaLogo,
+  gojek: gojekLogo,
+  shopee: shopeeLogo,
+  traveloka: travelokaLogo,
+  bukalapak: bukalapakLogo,
+  ovo: ovoLogo,
+  dana: danaLogo,
+  blibli: blibliLogo,
+  tiketcom: tiketcomLogo,
+  telkom: telkomLogo,
+  bca: bcaLogo,
 };
 
-// SVG fallback logos for companies without uploaded images
+// Company logo components using real images
 export const companyLogos = {
   tokopedia: () => (
-    <svg viewBox="0 0 120 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#42b549">
-        tokopedia
-      </text>
-    </svg>
+    <img src={tokopediaLogo} alt="Tokopedia" className="h-6 w-auto object-contain" />
   ),
   gojek: () => (
-    <svg viewBox="0 0 80 30" className="h-6 w-auto">
-      <circle cx="15" cy="15" r="12" fill="#00880f"/>
-      <text x="32" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#00880f">
-        gojek
-      </text>
-    </svg>
+    <img src={gojekLogo} alt="Gojek" className="h-6 w-auto object-contain" />
   ),
   shopee: () => (
-    <svg viewBox="0 0 100 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#ee4d2d">
-        Shopee
-      </text>
-    </svg>
+    <img src={shopeeLogo} alt="Shopee" className="h-6 w-auto object-contain" />
   ),
   traveloka: () => (
-    <svg viewBox="0 0 120 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#0194f3">
-        traveloka
-      </text>
-    </svg>
+    <img src={travelokaLogo} alt="Traveloka" className="h-6 w-auto object-contain" />
   ),
   bukalapak: () => (
-    <svg viewBox="0 0 120 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#e31e52">
-        Bukalapak
-      </text>
-    </svg>
+    <img src={bukalapakLogo} alt="Bukalapak" className="h-6 w-auto object-contain" />
   ),
   ovo: () => (
-    <svg viewBox="0 0 60 30" className="h-6 w-auto">
-      <rect x="0" y="5" width="50" height="20" rx="10" fill="#4c2a86"/>
-      <text x="10" y="20" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="14" fill="white">
-        OVO
-      </text>
-    </svg>
+    <img src={ovoLogo} alt="OVO" className="h-6 w-auto object-contain" />
   ),
   dana: () => (
-    <svg viewBox="0 0 80 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#108ee9">
-        DANA
-      </text>
-    </svg>
+    <img src={danaLogo} alt="Dana" className="h-6 w-auto object-contain" />
   ),
   grab: () => (
     <img src={grabLogo} alt="Grab" className="h-6 w-auto object-contain" />
   ),
   blibli: () => (
-    <svg viewBox="0 0 80 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#0095da">
-        Blibli
-      </text>
-    </svg>
+    <img src={blibliLogo} alt="Blibli" className="h-6 w-auto object-contain" />
   ),
   tiketcom: () => (
-    <svg viewBox="0 0 100 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#0064d2">
-        tiket.com
-      </text>
-    </svg>
+    <img src={tiketcomLogo} alt="Tiket.com" className="h-6 w-auto object-contain" />
   ),
   telkom: () => (
-    <svg viewBox="0 0 100 30" className="h-6 w-auto">
-      <text x="0" y="22" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="18" fill="#e4002b">
-        Telkom
-      </text>
-    </svg>
+    <img src={telkomLogo} alt="Telkom" className="h-6 w-auto object-contain" />
   ),
   bca: () => (
-    <svg viewBox="0 0 60 30" className="h-6 w-auto">
-      <rect x="0" y="5" width="50" height="20" rx="3" fill="#003d79"/>
-      <text x="8" y="20" fontFamily="Arial, sans-serif" fontWeight="bold" fontSize="14" fill="white">
-        BCA
-      </text>
-    </svg>
+    <img src={bcaLogo} alt="BCA" className="h-6 w-auto object-contain" />
   ),
+  // International companies - SVG fallbacks
   microsoft: () => (
     <svg viewBox="0 0 130 30" className="h-6 w-auto">
       <rect x="0" y="7" width="7" height="7" fill="#f25022"/>
