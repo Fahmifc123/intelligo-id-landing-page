@@ -361,7 +361,7 @@ const TestimonialSection = () => {
             {/* Slides Viewer */}
             {selectedPortfolio?.portfolio.slides && (
               <div className="relative">
-                <div className="aspect-[16/10] max-h-[280px] bg-secondary rounded-xl overflow-hidden mx-auto">
+                <div className="aspect-[16/9] max-h-[360px] bg-secondary rounded-xl overflow-hidden mx-auto">
                   <img 
                     src={selectedPortfolio.portfolio.slides[currentSlide]} 
                     alt={`Slide ${currentSlide + 1}`}
