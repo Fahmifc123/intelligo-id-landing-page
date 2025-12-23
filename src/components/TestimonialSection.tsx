@@ -2,12 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 import { Quote, ExternalLink, FileText, ChevronLeft, ChevronRight } from "lucide-react";
 import LogoCarousel from "./LogoCarousel";
 import useEmblaCarousel from "embla-carousel-react";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-} from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
 interface Portfolio {
@@ -38,7 +33,8 @@ const testimonials: Testimonial[] = [
     photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
     portfolio: {
       title: "E-Commerce Sales Dashboard",
-      description: "Dashboard interaktif untuk analisis penjualan e-commerce menggunakan Python, Pandas, dan Tableau. Proyek ini menganalisis data 1 juta+ transaksi.",
+      description:
+        "Dashboard interaktif untuk analisis penjualan e-commerce menggunakan Python, Pandas, dan Tableau. Proyek ini menganalisis data 1 juta+ transaksi.",
       thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
       type: "pdf",
       fileUrl: "#",
@@ -58,7 +54,8 @@ const testimonials: Testimonial[] = [
     photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
     portfolio: {
       title: "Sentiment Analysis Model",
-      description: "Model NLP untuk analisis sentimen review produk Indonesia dengan akurasi 92%. Menggunakan BERT dan fine-tuning untuk bahasa Indonesia.",
+      description:
+        "Model NLP untuk analisis sentimen review produk Indonesia dengan akurasi 92%. Menggunakan BERT dan fine-tuning untuk bahasa Indonesia.",
       thumbnail: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop",
       type: "ppt",
       fileUrl: "#",
@@ -78,12 +75,13 @@ const testimonials: Testimonial[] = [
     photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
     portfolio: {
       title: "Customer Churn Prediction",
-      description: "Model prediksi churn pelanggan dengan XGBoost dan feature engineering. Meningkatkan retensi pelanggan hingga 25%.",
+      description:
+        "Model prediksi churn pelanggan dengan XGBoost dan feature engineering. Meningkatkan retensi pelanggan hingga 25%.",
       thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop",
       type: "pdf",
       fileUrl: "#",
       slides: [
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
       ],
@@ -98,7 +96,8 @@ const testimonials: Testimonial[] = [
     photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
     portfolio: {
       title: "BI Dashboard for Retail",
-      description: "Dashboard Business Intelligence untuk retail dengan Power BI dan SQL. Membantu decision making untuk 50+ toko.",
+      description:
+        "Dashboard Business Intelligence untuk retail dengan Power BI dan SQL. Membantu decision making untuk 50+ toko.",
       thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       type: "ppt",
       fileUrl: "#",
@@ -118,7 +117,8 @@ const testimonials: Testimonial[] = [
     photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
     portfolio: {
       title: "Computer Vision for Quality Control",
-      description: "Sistem deteksi cacat produk menggunakan Computer Vision dan Deep Learning. Akurasi 98% dengan processing real-time.",
+      description:
+        "Sistem deteksi cacat produk menggunakan Computer Vision dan Deep Learning. Akurasi 98% dengan processing real-time.",
       thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
       type: "pdf",
       fileUrl: "#",
@@ -149,9 +149,9 @@ const alumniCompanies = [
 const TestimonialSection = () => {
   const [selectedPortfolio, setSelectedPortfolio] = useState<Testimonial | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  
+
   // Testimonial Carousel
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
     slidesToScroll: 1,
@@ -191,17 +191,13 @@ const TestimonialSection = () => {
 
   const nextSlide = () => {
     if (selectedPortfolio?.portfolio.slides) {
-      setCurrentSlide((prev) => 
-        prev < selectedPortfolio.portfolio.slides!.length - 1 ? prev + 1 : 0
-      );
+      setCurrentSlide((prev) => (prev < selectedPortfolio.portfolio.slides!.length - 1 ? prev + 1 : 0));
     }
   };
 
   const prevSlide = () => {
     if (selectedPortfolio?.portfolio.slides) {
-      setCurrentSlide((prev) => 
-        prev > 0 ? prev - 1 : selectedPortfolio.portfolio.slides!.length - 1
-      );
+      setCurrentSlide((prev) => (prev > 0 ? prev - 1 : selectedPortfolio.portfolio.slides!.length - 1));
     }
   };
 
@@ -210,9 +206,7 @@ const TestimonialSection = () => {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Dipercaya Alumni, Diakui Industri
-          </h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Dipercaya Alumni, Diakui Industri</h2>
           <p className="text-lg text-primary-foreground/70 max-w-2xl mx-auto">
             Dengarkan cerita sukses alumni kami yang kini berkarir di perusahaan-perusahaan top Indonesia.
           </p>
@@ -246,13 +240,9 @@ const TestimonialSection = () => {
                   <div className="bg-primary-foreground/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary-foreground/10 hover:bg-primary-foreground/10 transition-all duration-300 h-full flex flex-col">
                     {/* Photo */}
                     <div className="relative h-48 overflow-hidden">
-                      <img 
-                        src={testimonial.photo} 
-                        alt={testimonial.name}
-                        className="w-full h-full object-cover"
-                      />
+                      <img src={testimonial.photo} alt={testimonial.name} className="w-full h-full object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
-                      
+
                       {/* Author Info Overlay */}
                       <div className="absolute bottom-4 left-4 right-4">
                         <p className="font-bold text-primary-foreground text-lg">{testimonial.name}</p>
@@ -266,27 +256,20 @@ const TestimonialSection = () => {
                       {/* Quote */}
                       <div className="flex-grow">
                         <Quote className="w-8 h-8 text-accent mb-3" />
-                        <p className="text-primary-foreground/90 leading-relaxed">
-                          "{testimonial.content}"
-                        </p>
+                        <p className="text-primary-foreground/90 leading-relaxed">"{testimonial.content}"</p>
                       </div>
 
                       {/* Portfolio Preview */}
-                      <div 
-                        className="mt-6 group cursor-pointer"
-                        onClick={() => openPortfolio(testimonial)}
-                      >
+                      <div className="mt-6 group cursor-pointer" onClick={() => openPortfolio(testimonial)}>
                         <div className="relative overflow-hidden rounded-xl">
-                          <img 
-                            src={testimonial.portfolio.thumbnail} 
+                          <img
+                            src={testimonial.portfolio.thumbnail}
                             alt={testimonial.portfolio.title}
                             className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
                             <div className="flex-1 min-w-0 mr-3">
-                              <p className="text-white text-sm font-semibold truncate">
-                                {testimonial.portfolio.title}
-                              </p>
+                              <p className="text-white text-sm font-semibold truncate">{testimonial.portfolio.title}</p>
                               <div className="flex items-center gap-1 text-white/70 text-xs mt-1">
                                 <FileText className="w-3 h-3 flex-shrink-0" />
                                 <span>{testimonial.portfolio.type.toUpperCase()}</span>
@@ -320,15 +303,8 @@ const TestimonialSection = () => {
 
         {/* Alumni Companies Carousel */}
         <div className="text-center">
-          <p className="text-sm text-primary-foreground/50 mb-6 uppercase tracking-wider">
-            Alumni kami bekerja di
-          </p>
-          <LogoCarousel 
-            logos={alumniCompanies} 
-            direction="left" 
-            speed="normal"
-            variant="dark"
-          />
+          <p className="text-sm text-primary-foreground/50 mb-6 uppercase tracking-wider">Alumni kami bekerja di</p>
+          <LogoCarousel logos={alumniCompanies} direction="left" speed="normal" variant="dark" />
         </div>
       </div>
 
@@ -354,16 +330,14 @@ const TestimonialSection = () => {
 
           <div className="p-6">
             {/* Portfolio Description */}
-            <p className="text-muted-foreground mb-6">
-              {selectedPortfolio?.portfolio.description}
-            </p>
+            <p className="text-muted-foreground mb-6">{selectedPortfolio?.portfolio.description}</p>
 
             {/* Slides Viewer */}
             {selectedPortfolio?.portfolio.slides && (
               <div className="relative">
                 <div className="bg-secondary rounded-xl overflow-hidden">
-                  <img 
-                    src={selectedPortfolio.portfolio.slides[currentSlide]} 
+                  <img
+                    src={selectedPortfolio.portfolio.slides[currentSlide]}
                     alt={`Slide ${currentSlide + 1}`}
                     className="w-full h-auto max-h-[400px] object-cover"
                   />
@@ -371,12 +345,7 @@ const TestimonialSection = () => {
 
                 {/* Slide Navigation */}
                 <div className="flex items-center justify-between mt-4">
-                  <Button 
-                    variant="outline" 
-                    size="icon"
-                    onClick={prevSlide}
-                    className="rounded-full"
-                  >
+                  <Button variant="outline" size="icon" onClick={prevSlide} className="rounded-full">
                     <ChevronLeft className="w-5 h-5" />
                   </Button>
 
@@ -386,20 +355,13 @@ const TestimonialSection = () => {
                         key={idx}
                         onClick={() => setCurrentSlide(idx)}
                         className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                          idx === currentSlide 
-                            ? "bg-accent w-6" 
-                            : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                          idx === currentSlide ? "bg-accent w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                         }`}
                       />
                     ))}
                   </div>
 
-                  <Button 
-                    variant="outline" 
-                    size="icon"
-                    onClick={nextSlide}
-                    className="rounded-full"
-                  >
+                  <Button variant="outline" size="icon" onClick={nextSlide} className="rounded-full">
                     <ChevronRight className="w-5 h-5" />
                   </Button>
                 </div>
