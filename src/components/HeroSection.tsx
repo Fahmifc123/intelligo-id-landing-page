@@ -43,26 +43,26 @@ const HeroSection = () => {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Bootcamp{" "}
-              <span className="text-accent">Data Science</span>{" "}
-              with Certification + Real Internship
+              Your #1{" "}
+              <span className="text-accent">Data Science & AI</span>{" "}
+              Learning Platform
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">
-              Transformasi dirimu menjadi Data Scientist profesional dengan 
-              Sertifikasi BNSP & praktik AI + real project di setiap fase belajarmu.
+              Job Ready Bootcamp dengan Jaminan Interview Kerja dan Pendampingan Karir 
+              lengkap dengan pembuatan CV, optimasi LinkedIn & personal branding.
             </p>
 
             {/* Batch Info */}
             <div className="flex flex-wrap gap-4 text-sm">
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Calendar className="w-4 h-4 text-accent" />
-                <span>Opening Class: Januari 2025</span>
+                <span>Online & Offline Program</span>
               </div>
               <div className="flex items-center gap-2 text-primary-foreground/80">
                 <Users className="w-4 h-4 text-accent" />
-                <span>Kuota Terisi: 75%</span>
+                <span>Beginner & Job Ready</span>
               </div>
             </div>
 
@@ -105,10 +105,10 @@ const HeroSection = () => {
               {/* Stats Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Bergabung dengan 500+ Alumni Sukses
+                  Bergabung dengan 315+ Alumni Sukses
                 </h3>
                 <p className="text-muted-foreground">
-                  Yang kini berkarir di perusahaan top Indonesia
+                  21+ Batch telah berjalan dengan hasil memuaskan
                 </p>
               </div>
 
