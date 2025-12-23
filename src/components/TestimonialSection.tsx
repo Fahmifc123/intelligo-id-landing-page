@@ -361,11 +361,11 @@ const TestimonialSection = () => {
             {/* Slides Viewer */}
             {selectedPortfolio?.portfolio.slides && (
               <div className="relative">
-                <div className="aspect-[16/9] max-h-[360px] bg-secondary rounded-xl overflow-hidden mx-auto">
+                <div className="bg-secondary rounded-xl overflow-hidden flex items-center justify-center p-4">
                   <img 
                     src={selectedPortfolio.portfolio.slides[currentSlide]} 
                     alt={`Slide ${currentSlide + 1}`}
-                    className="w-full h-full object-contain"
+                    className="max-w-full max-h-[350px] object-contain rounded-lg"
                   />
                 </div>
 
