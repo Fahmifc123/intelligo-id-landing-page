@@ -280,21 +280,21 @@ const TestimonialSection = () => {
                           <img 
                             src={testimonial.portfolio.thumbnail} 
                             alt={testimonial.portfolio.title}
-                            className="w-full h-28 object-cover group-hover:scale-105 transition-transform duration-500"
+                            className="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-500"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex items-end p-3">
-                            <div className="flex-1">
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent flex items-end p-4">
+                            <div className="flex-1 min-w-0 mr-3">
                               <p className="text-white text-sm font-semibold truncate">
                                 {testimonial.portfolio.title}
                               </p>
                               <div className="flex items-center gap-1 text-white/70 text-xs mt-1">
-                                <FileText className="w-3 h-3" />
+                                <FileText className="w-3 h-3 flex-shrink-0" />
                                 <span>{testimonial.portfolio.type.toUpperCase()}</span>
                               </div>
                             </div>
-                            <div className="bg-accent text-accent-foreground px-3 py-1.5 rounded-lg text-xs font-semibold flex items-center gap-1 group-hover:bg-accent/90 transition-colors">
-                              <ExternalLink className="w-3 h-3" />
-                              Lihat
+                            <div className="bg-accent text-accent-foreground px-3 py-2 rounded-lg text-xs font-semibold flex items-center gap-1.5 group-hover:bg-accent/90 transition-colors flex-shrink-0">
+                              <ExternalLink className="w-3.5 h-3.5" />
+                              <span>Lihat</span>
                             </div>
                           </div>
                         </div>
