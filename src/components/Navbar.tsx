@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Users, FolderOpen, FileText, GraduationCap, Code, Brain, Monitor, Video } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logoIntelligo from "@/assets/logo-intelligo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,17 +104,12 @@ const Navbar = () => {
       <div className="section-container">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2">
-            <div className="flex items-center gap-1">
-              <div className="w-8 h-8 rounded bg-accent flex items-center justify-center">
-                <span className="text-accent-foreground font-bold text-lg">I</span>
-              </div>
-              <div className="w-1 h-8 bg-accent rounded"></div>
-            </div>
-            <span className="font-bold text-xl tracking-tight">
-              <span className="text-accent">INTELLIGO</span>
-              <span className="text-foreground">.ID</span>
-            </span>
+          <Link to="/" className="flex items-center">
+            <img 
+              src={logoIntelligo} 
+              alt="Intelligo ID" 
+              className="h-8 md:h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
