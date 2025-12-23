@@ -6,10 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { label: "Program", href: "/#program" },
-    { label: "Harga", href: "/#pricing" },
-    { label: "Mentor", href: "/#mentor" },
-    { label: "Testimoni", href: "/#testimoni" },
+    { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Portofolio", href: "/portofolio" },
     { label: "Kontak", href: "/kontak" },
