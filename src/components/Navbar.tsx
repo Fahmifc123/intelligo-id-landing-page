@@ -258,7 +258,7 @@ const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
             <Button variant="accent" size="sm" asChild>
-              <a href="https://lms.intelligo.id" target="_blank" rel="noopener noreferrer">
+              <a href="https://intelligo.myr.id/" target="_blank" rel="noopener noreferrer">
                 Learning Portal
               </a>
             </Button>
@@ -325,7 +325,7 @@ const Navbar = () => {
 
               <div className="px-4 mt-4">
                 <Button variant="accent" className="w-full justify-center" asChild>
-                  <a href="https://lms.intelligo.id" target="_blank" rel="noopener noreferrer">
+                  <a href="https://intelligo.myr.id/" target="_blank" rel="noopener noreferrer">
                     Learning Portal
                   </a>
                 </Button>
