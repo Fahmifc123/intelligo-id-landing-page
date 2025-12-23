@@ -412,8 +412,8 @@ const TestimonialSection = () => {
             )}
 
             {/* Download Button */}
-            <div className="flex justify-center mt-6">
-              <Button variant="accent" className="gap-2">
+            <div className="flex justify-center mt-6 pb-2">
+              <Button variant="accent" className="gap-2 flex-shrink-0">
                 <FileText className="w-4 h-4" />
                 Download {selectedPortfolio?.portfolio.type.toUpperCase()}
               </Button>
