@@ -2,9 +2,13 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, FileText, Code, BarChart3, Brain } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ExternalLink, FileText, Code, BarChart3, Brain, Eye } from "lucide-react";
+import { useState } from "react";
 
 const PortofolioAlumni = () => {
+  const [selectedPdf, setSelectedPdf] = useState<{ title: string; url: string } | null>(null);
+
   const portfolios = [
     {
       title: "E-tail Explorer: Navigating E-commerce Customer Interactions",
@@ -12,7 +16,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 5",
       tags: ["Data Science", "Python", "Analytics", "Business"],
       description: "Analisis mendalam tentang interaksi pelanggan e-commerce untuk meningkatkan pengalaman pengguna dan konversi.",
-      link: "https://docs.google.com/viewerng/viewer?url=http://www.intelligo.id/wp-content/uploads/2025/03/Final-Project-Muhammad-Vito-Aristawidya.pptx&hl=en",
+      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/03/Final-Project-Muhammad-Vito-Aristawidya.pptx",
       icon: BarChart3
     },
     {
@@ -21,7 +25,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 6",
       tags: ["Data Science", "Python", "Machine Learning", "HR Analytics"],
       description: "Pendekatan machine learning untuk memprediksi dan mengoptimalkan promosi karyawan dalam perusahaan.",
-      link: "https://docs.google.com/viewerng/viewer?url=http://www.intelligo.id/wp-content/uploads/2025/03/Fahmi-Hammam-final-project-PPT-Fahmi-hammam-t.pdf&hl=en",
+      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/03/Fahmi-Hammam-final-project-PPT-Fahmi-hammam-t.pdf",
       icon: Brain
     },
     {
@@ -30,7 +34,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 6",
       tags: ["Data Science", "Python", "Analytics", "Education"],
       description: "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023.",
-      link: "https://docs.google.com/viewerng/viewer?url=http://www.intelligo.id/wp-content/uploads/2025/02/Intelligo-Final-Project-Zaki-Maulana-Hidayat.pdf&hl=en",
+      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/02/Intelligo-Final-Project-Zaki-Maulana-Hidayat.pdf",
       icon: FileText
     },
     {
@@ -39,7 +43,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 7",
       tags: ["Data Science", "Clustering", "Marketing", "Python"],
       description: "Implementasi K-Means clustering untuk segmentasi pelanggan dan strategi marketing yang lebih targeted.",
-      link: "#",
+      pdfUrl: "",
       icon: Code
     },
     {
@@ -48,7 +52,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 7",
       tags: ["NLP", "Python", "Deep Learning", "Analytics"],
       description: "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media.",
-      link: "#",
+      pdfUrl: "",
       icon: Brain
     },
     {
@@ -57,7 +61,7 @@ const PortofolioAlumni = () => {
       batch: "Batch 5",
       tags: ["Time Series", "Forecasting", "Python", "Business"],
       description: "Prediksi penjualan menggunakan analisis time series untuk perencanaan bisnis yang lebih akurat.",
-      link: "#",
+      pdfUrl: "",
       icon: BarChart3
     }
   ];
@@ -68,6 +72,10 @@ const PortofolioAlumni = () => {
     { value: "15+", label: "Industry Sector" },
     { value: "95%", label: "Project Success Rate" }
   ];
+
+  const getGoogleViewerUrl = (url: string) => {
+    return `https://docs.google.com/viewer?url=${encodeURIComponent(url)}&embedded=true`;
+  };
 
   return (
     <>
@@ -153,11 +161,14 @@ const PortofolioAlumni = () => {
                           <p className="text-foreground/50 text-xs">{portfolio.batch}</p>
                         </div>
                         
-                        {portfolio.link !== "#" && (
-                          <Button variant="ghost" size="sm" asChild>
-                            <a href={portfolio.link} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="w-4 h-4" />
-                            </a>
+                        {portfolio.pdfUrl && (
+                          <Button 
+                            variant="ghost" 
+                            size="sm"
+                            onClick={() => setSelectedPdf({ title: portfolio.title, url: portfolio.pdfUrl })}
+                          >
+                            <Eye className="w-4 h-4 mr-1" />
+                            Lihat
                           </Button>
                         )}
                       </div>
@@ -207,6 +218,26 @@ const PortofolioAlumni = () => {
         </main>
 
         <Footer />
+
+        {/* PDF Viewer Dialog */}
+        <Dialog open={!!selectedPdf} onOpenChange={(open) => !open && setSelectedPdf(null)}>
+          <DialogContent className="max-w-5xl w-[95vw] h-[85vh] p-0 overflow-hidden">
+            <DialogHeader className="p-4 pb-0">
+              <DialogTitle className="text-lg font-semibold line-clamp-1 pr-8">
+                {selectedPdf?.title}
+              </DialogTitle>
+            </DialogHeader>
+            <div className="flex-1 p-4 pt-2 h-[calc(85vh-60px)]">
+              {selectedPdf && (
+                <iframe
+                  src={getGoogleViewerUrl(selectedPdf.url)}
+                  className="w-full h-full rounded-lg border border-border"
+                  title={selectedPdf.title}
+                />
+              )}
+            </div>
+          </DialogContent>
+        </Dialog>
       </div>
     </>
   );
