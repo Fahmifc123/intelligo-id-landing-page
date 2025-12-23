@@ -28,43 +28,43 @@ export const logoImages: Record<string, string> = {
   bca: bcaLogo,
 };
 
-// Company logo components using real images
+// Company logo components using real images with consistent sizing
 export const companyLogos = {
   tokopedia: () => (
-    <img src={tokopediaLogo} alt="Tokopedia" className="h-6 w-auto object-contain" />
+    <img src={tokopediaLogo} alt="Tokopedia" className="h-7 max-w-[100px] object-contain" />
   ),
   gojek: () => (
-    <img src={gojekLogo} alt="Gojek" className="h-6 w-auto object-contain" />
+    <img src={gojekLogo} alt="Gojek" className="h-7 max-w-[100px] object-contain" />
   ),
   shopee: () => (
-    <img src={shopeeLogo} alt="Shopee" className="h-6 w-auto object-contain" />
+    <img src={shopeeLogo} alt="Shopee" className="h-7 max-w-[100px] object-contain" />
   ),
   traveloka: () => (
-    <img src={travelokaLogo} alt="Traveloka" className="h-6 w-auto object-contain" />
+    <img src={travelokaLogo} alt="Traveloka" className="h-6 max-w-[100px] object-contain" />
   ),
   bukalapak: () => (
-    <img src={bukalapakLogo} alt="Bukalapak" className="h-6 w-auto object-contain" />
+    <img src={bukalapakLogo} alt="Bukalapak" className="h-7 max-w-[100px] object-contain" />
   ),
   ovo: () => (
-    <img src={ovoLogo} alt="OVO" className="h-6 w-auto object-contain" />
+    <img src={ovoLogo} alt="OVO" className="h-6 max-w-[80px] object-contain" />
   ),
   dana: () => (
-    <img src={danaLogo} alt="Dana" className="h-6 w-auto object-contain" />
+    <img src={danaLogo} alt="Dana" className="h-6 max-w-[80px] object-contain" />
   ),
   grab: () => (
-    <img src={grabLogo} alt="Grab" className="h-6 w-auto object-contain" />
+    <img src={grabLogo} alt="Grab" className="h-7 max-w-[80px] object-contain" />
   ),
   blibli: () => (
-    <img src={blibliLogo} alt="Blibli" className="h-6 w-auto object-contain" />
+    <img src={blibliLogo} alt="Blibli" className="h-6 max-w-[80px] object-contain" />
   ),
   tiketcom: () => (
-    <img src={tiketcomLogo} alt="Tiket.com" className="h-6 w-auto object-contain" />
+    <img src={tiketcomLogo} alt="Tiket.com" className="h-6 max-w-[100px] object-contain" />
   ),
   telkom: () => (
-    <img src={telkomLogo} alt="Telkom" className="h-6 w-auto object-contain" />
+    <img src={telkomLogo} alt="Telkom" className="h-7 max-w-[100px] object-contain" />
   ),
   bca: () => (
-    <img src={bcaLogo} alt="BCA" className="h-6 w-auto object-contain" />
+    <img src={bcaLogo} alt="BCA" className="h-7 max-w-[80px] object-contain" />
   ),
   // International companies - SVG fallbacks
   microsoft: () => (
