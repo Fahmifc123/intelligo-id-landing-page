@@ -334,7 +334,7 @@ const TestimonialSection = () => {
 
       {/* Portfolio Dialog */}
       <Dialog open={!!selectedPortfolio} onOpenChange={closePortfolio}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-hidden p-0 bg-card">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0 bg-card">
           <DialogHeader className="p-6 pb-0">
             <div className="flex items-start justify-between">
               <div>
