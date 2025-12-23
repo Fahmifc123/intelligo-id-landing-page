@@ -3,23 +3,23 @@ import { GraduationCap, Building2, TrendingUp, Calendar } from "lucide-react";
 const stats = [
   {
     icon: GraduationCap,
-    value: "500+",
+    value: "315+",
     label: "Alumni Bootcamp",
   },
   {
     icon: Building2,
-    value: "100+",
-    label: "Hiring Partners",
+    value: "170+",
+    label: "Alumni Private Course",
   },
   {
     icon: TrendingUp,
-    value: "85%",
-    label: "Lulusan Dapat Kerja",
+    value: "21+",
+    label: "Batch Telah Berjalan",
   },
   {
     icon: Calendar,
-    value: "20+",
-    label: "Batch Telah Berjalan",
+    value: "100+",
+    label: "Corporate Client",
   },
 ];
 

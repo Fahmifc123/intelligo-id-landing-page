@@ -2,34 +2,34 @@ import { Monitor, Users, Zap, Calendar, User, Building2, ArrowRight } from "luci
 
 const programs = [
   {
-    icon: Monitor,
-    title: "Bootcamp Online",
-    description: "Live class via Zoom / Google Meet. Semi-private & cocok untuk pemula.",
+    icon: User,
+    title: "Private Course 1-on-1",
+    description: "Mentoring personal dengan custom silabus sesuai kebutuhan dan jadwal fleksibel.",
   },
   {
     icon: Users,
-    title: "Bootcamp Offline",
-    description: "Tatap muka dengan praktik intensif dan networking langsung.",
+    title: "Bootcamp Semi Private",
+    description: "Kelas kecil 3-5 orang untuk pembelajaran lebih intensif dan interaktif.",
   },
   {
-    icon: Zap,
-    title: "Mini Bootcamp Online",
-    description: "Durasi singkat, fokus skill spesifik seperti ML, NLP, CV.",
+    icon: Monitor,
+    title: "Bootcamp Private",
+    description: "Program eksklusif dengan perhatian penuh dari trainer profesional.",
   },
   {
     icon: Calendar,
     title: "Workshop & Mini Class",
-    description: "Event musiman dengan topik AI & Data terbaru.",
+    description: "Event musiman dengan topik AI & Data terbaru, cocok untuk eksplorasi skill.",
   },
   {
-    icon: User,
-    title: "Private Course",
-    description: "1-on-1 mentoring dengan custom silabus sesuai kebutuhan.",
+    icon: Zap,
+    title: "Job Ready Bootcamp",
+    description: "Program intensif dengan jaminan interview kerja dan pendampingan karir.",
   },
   {
     icon: Building2,
     title: "Corporate Training",
-    description: "Training perusahaan dengan use case real industri.",
+    description: "Pelatihan untuk perusahaan, instansi pemerintahan, startup, hingga BUMN.",
   },
 ];
 
