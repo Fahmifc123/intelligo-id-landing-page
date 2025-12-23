@@ -37,7 +37,7 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         {/* Sidebar Navigation - Desktop */}
         <SidebarNav />
-        
+
         {/* Main Content - with left margin for sidebar on desktop */}
         <main className="lg:ml-56 transition-all duration-300">
           <HeroSection />
