@@ -40,11 +40,10 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" size="sm">
-              Login
-            </Button>
-            <Button variant="accent" size="sm">
-              Daftar Sekarang
+            <Button variant="accent" size="sm" asChild>
+              <a href="https://lms.intelligo.id" target="_blank" rel="noopener noreferrer">
+                Portal Pelanggan
+              </a>
             </Button>
           </div>
 
@@ -72,11 +71,10 @@ const Navbar = () => {
                 </a>
               ))}
               <div className="flex flex-col gap-2 mt-4 px-4">
-                <Button variant="ghost" className="w-full justify-center">
-                  Login
-                </Button>
-                <Button variant="accent" className="w-full justify-center">
-                  Daftar Sekarang
+                <Button variant="accent" className="w-full justify-center" asChild>
+                  <a href="https://lms.intelligo.id" target="_blank" rel="noopener noreferrer">
+                    Portal Pelanggan
+                  </a>
                 </Button>
               </div>
             </div>
