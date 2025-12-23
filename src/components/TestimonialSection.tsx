@@ -81,9 +81,9 @@ const testimonials: Testimonial[] = [
       type: "pdf",
       fileUrl: "#",
       slides: [
+        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=801&h=600&fit=crop",
         "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
       ],
     },
   },
