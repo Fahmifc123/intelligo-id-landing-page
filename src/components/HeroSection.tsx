@@ -101,10 +101,10 @@ const HeroSection = () => {
               {/* Stats Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Bergabung dengan 30K+ Data & AI Talents    
+                  Bergabung dengan 30K+ Komunitas Data Science & AI                
                 </h3>
                 <p className="text-muted-foreground">
-                  21+ Batch telah berjalan dengan hasil memuaskan
+                  100+ Program & Batch Pembelajaran 
                 </p>
               </div>
 
@@ -112,21 +112,21 @@ const HeroSection = () => {
               <div className="grid grid-cols-3 gap-4 mb-8">
                 <div className="text-center p-4 bg-accent/10 rounded-xl">
                   <p className="text-3xl md:text-4xl font-bold text-accent">85%</p>
-                  <p className="text-sm text-muted-foreground mt-1">Alumni Dapat Kerja</p>
+                  <p className="text-sm text-muted-foreground mt-1">Alumni Aktif di Berbagai Bidang</p>
                 </div>
                 <div className="text-center p-4 bg-primary/10 rounded-xl">
                   <p className="text-3xl md:text-4xl font-bold text-primary">4.9/5</p>
-                  <p className="text-sm text-muted-foreground mt-1">Rating Kepuasan</p>
+                  <p className="text-sm text-muted-foreground mt-1">Berdasarkan feedback</p>
                 </div>
                 <div className="text-center p-4 bg-accent/10 rounded-xl">
-                  <p className="text-3xl md:text-4xl font-bold text-accent">20+</p>
-                  <p className="text-sm text-muted-foreground mt-1">Batch Berjalan</p>
+                  <p className="text-3xl md:text-4xl font-bold text-accent">100+ </p>
+                  <p className="text-sm text-muted-foreground mt-1">Trainer & Mentor  </p>
                 </div>
               </div>
 
               {/* Career Paths */}
               <div className="space-y-3">
-                <p className="text-sm font-semibold text-foreground">Opsi Karier & Gaji:</p>
+                <p className="text-sm font-semibold text-foreground">Opsi Karier & Estimasi rata-rata Gaji di Indonesia        </p>
                 <div className="grid grid-cols-2 gap-3">
                   <div className="flex items-center gap-2 p-3 bg-secondary rounded-lg">
                     <div className="w-8 h-8 rounded-full bg-accent/20 flex items-center justify-center">
@@ -134,7 +134,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-foreground">Data Scientist</p>
-                      <p className="text-xs text-accent font-semibold">15-25 Juta/bln</p>
+                      <p className="text-xs text-accent font-semibold">10-25 Juta/bln</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 p-3 bg-secondary rounded-lg">
@@ -143,7 +143,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-foreground">ML Engineer</p>
-                      <p className="text-xs text-accent font-semibold">18-30 Juta/bln</p>
+                      <p className="text-xs text-accent font-semibold">12-30 Juta/bln</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 p-3 bg-secondary rounded-lg">
@@ -152,7 +152,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-foreground">Data Analyst</p>
-                      <p className="text-xs text-accent font-semibold">10-18 Juta/bln</p>
+                      <p className="text-xs text-accent font-semibold">8-18 Juta/bln</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-2 p-3 bg-secondary rounded-lg">
@@ -161,7 +161,7 @@ const HeroSection = () => {
                     </div>
                     <div>
                       <p className="text-xs font-medium text-foreground">AI Engineer</p>
-                      <p className="text-xs text-accent font-semibold">20-35 Juta/bln</p>
+                      <p className="text-xs text-accent font-semibold">15-35 Juta/bln</p>
                     </div>
                   </div>
                 </div>
