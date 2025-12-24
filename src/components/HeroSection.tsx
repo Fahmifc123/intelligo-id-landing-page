@@ -7,7 +7,7 @@ const HeroSection = () => {
     { icon: BookOpen, label: "Bootcamp" },
     { icon: Users, label: "Trainer Berpengalaman" },
     { icon: GraduationCap, label: "Beginner Friendly" },
-    { icon: Briefcase, label: "Job Ready" },
+    { icon: Briefcase, label: "Job Ready Program" },
   ];
 
   return (
