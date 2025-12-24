@@ -9,6 +9,12 @@ import AboutUs from "./pages/AboutUs";
 import Kontak from "./pages/Kontak";
 import PortofolioAlumni from "./pages/PortofolioAlumni";
 import JobConnect from "./pages/JobConnect";
+import PrivateCourse from "./pages/PrivateCourse";
+import BootcampSemiPrivate from "./pages/BootcampSemiPrivate";
+import BootcampPrivate from "./pages/BootcampPrivate";
+import Workshop from "./pages/Workshop";
+import JobReadyBootcamp from "./pages/JobReadyBootcamp";
+import CorporateTraining from "./pages/CorporateTraining";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -26,6 +32,12 @@ const App = () => (
             <Route path="/kontak" element={<Kontak />} />
             <Route path="/portofolio" element={<PortofolioAlumni />} />
             <Route path="/job-connect" element={<JobConnect />} />
+            <Route path="/program/private-course" element={<PrivateCourse />} />
+            <Route path="/program/bootcamp-semi-private" element={<BootcampSemiPrivate />} />
+            <Route path="/program/bootcamp-private" element={<BootcampPrivate />} />
+            <Route path="/program/workshop" element={<Workshop />} />
+            <Route path="/program/job-ready-bootcamp" element={<JobReadyBootcamp />} />
+            <Route path="/program/corporate-training" element={<CorporateTraining />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
