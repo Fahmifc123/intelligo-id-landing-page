@@ -1,24 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { Star, Users, Award, Calendar, BookOpen, Briefcase, GraduationCap, CheckCircle } from "lucide-react";
 import heroImage from "@/assets/hero-mentor.jpg";
-
 const HeroSection = () => {
-  const features = [
-    { icon: BookOpen, label: "Bootcamp" },
-    { icon: Users, label: "Trainer Berpengalaman" },
-    { icon: GraduationCap, label: "Beginner Friendly" },
-    { icon: Briefcase, label: "Job Ready Program" },
-  ];
-
-  return (
-    <section id="hero" className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden">
+  const features = [{
+    icon: BookOpen,
+    label: "Bootcamp"
+  }, {
+    icon: Users,
+    label: "Trainer Berpengalaman"
+  }, {
+    icon: GraduationCap,
+    label: "Beginner Friendly"
+  }, {
+    icon: Briefcase,
+    label: "Job Ready Program"
+  }];
+  return <section id="hero" className="relative pt-16 md:pt-20 pb-16 md:pb-24 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="" 
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/90 to-primary/70" />
       </div>
 
@@ -28,17 +28,12 @@ const HeroSection = () => {
           <div className="space-y-6 animate-fade-in-up text-primary-foreground">
             {/* Feature Tags */}
             <div className="flex flex-wrap gap-2">
-              {features.map((feature) => (
-                <div 
-                  key={feature.label}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20"
-                >
+              {features.map(feature => <div key={feature.label} className="inline-flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 backdrop-blur-sm rounded-full border border-primary-foreground/20">
                   <feature.icon className="w-4 h-4 text-accent" />
                   <span className="text-sm font-medium text-primary-foreground">
                     {feature.label}
                   </span>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Headline */}
@@ -49,10 +44,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">
-              Job Ready Bootcamp dengan Jaminan Interview Kerja dan Pendampingan Karir 
-              lengkap dengan pembuatan CV, optimasi LinkedIn & personal branding.
-            </p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">Platform EduTech Data Science & AI. Mulai dari Bootcamp, Private Course 1on1 & Video Course. Dari skema Beginner hingga Job Ready Bootcamp dengan Jaminan Interview Kerja dan Pendampingan Karir dengan pembuatan CV, optimasi LinkedIn & personal branding dengan 5 sampai 13 Portofolio.</p>
 
             {/* Batch Info */}
             <div className="flex flex-wrap gap-4 text-sm">
@@ -174,9 +166,7 @@ const HeroSection = () => {
               {/* Rating Stars */}
               <div className="flex items-center justify-center gap-2 mt-6 pt-6 border-t border-border">
                 <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-accent text-accent" />)}
                 </div>
                 <span className="text-sm text-muted-foreground">
                   Dari 500+ Review Alumni
@@ -190,8 +180,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
