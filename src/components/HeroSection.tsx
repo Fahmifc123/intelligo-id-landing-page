@@ -44,7 +44,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">Platform EduTech Data Science & AI. Mulai dari Bootcamp, Private Course 1on1 & Video Course. Dari skema Beginner hingga Job Ready Bootcamp dengan Jaminan Interview Kerja dan Pendampingan Karir dengan pembuatan CV, optimasi LinkedIn & personal branding dengan 5 sampai 13 Portofolio.</p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">Intelligo ID adalah platform EduTech Data Science & AI yang menyediakan Bootcamp, Private Course 1-on-1, dan Video Course — dari Beginner hingga Job Ready, lengkap dengan jaminan interview kerja, pendampingan karir, serta 5–13 portofolio profesional (CV, LinkedIn, dan personal branding).</p>
 
             {/* Batch Info */}
             <div className="flex flex-wrap gap-4 text-sm">
