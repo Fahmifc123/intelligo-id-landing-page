@@ -44,7 +44,7 @@ const HeroSection = () => {
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">Intelligo ID adalah platform EduTech Data Science & AI yang menyediakan Bootcamp, Private Course 1-on-1, dan Video Course — dari Beginner hingga Job Ready, lengkap dengan jaminan interview kerja, pendampingan karir, serta 5–13 portofolio profesional (CV, LinkedIn, dan personal branding).</p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 max-w-xl">Intelligo ID adalah platform EduTech Data Science & AI yang menyediakan Bootcamp, Private Course 1-on-1, dan Video Course — dari Beginner hingga Job Ready, lengkap dengan jaminan interview kerja, pendampingan karir (CV, LinkedIn, dan personal branding).</p>
 
             {/* Batch Info */}
             <div className="flex flex-wrap gap-4 text-sm">
@@ -79,8 +79,8 @@ const HeroSection = () => {
                   <CheckCircle className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">Certified by</p>
-                  <p className="font-semibold text-sm text-primary-foreground">BNSP Indonesia</p>
+                  <p className="text-xs text-primary-foreground/60">Real Project & Portfolio</p>
+                  <p className="font-semibold text-sm text-primary-foreground">5–13 Projects</p>
                 </div>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-primary-foreground/10 rounded-lg border border-primary-foreground/20">
@@ -88,8 +88,8 @@ const HeroSection = () => {
                   <Award className="w-5 h-5 text-accent" />
                 </div>
                 <div>
-                  <p className="text-xs text-primary-foreground/60">Partner</p>
-                  <p className="font-semibold text-sm text-primary-foreground">Microsoft Azure</p>
+                  <p className="text-xs text-primary-foreground/60">Certificate</p>
+                  <p className="font-semibold text-sm text-primary-foreground">Performance Report</p>
                 </div>
               </div>
             </div>
@@ -101,7 +101,7 @@ const HeroSection = () => {
               {/* Stats Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Bergabung dengan 315+ Alumni Sukses
+                  Bergabung dengan 30K+ Data & AI Talents    
                 </h3>
                 <p className="text-muted-foreground">
                   21+ Batch telah berjalan dengan hasil memuaskan
