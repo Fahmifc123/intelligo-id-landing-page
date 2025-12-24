@@ -60,11 +60,15 @@ const HeroSection = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" className="animate-pulse-glow">
-                Daftar Sekarang
+              <Button variant="hero" size="xl" className="animate-pulse-glow" asChild>
+                <a href="https://intelligo.id/wa-mintell" target="_blank" rel="noopener noreferrer">
+                  Daftar Sekarang
+                </a>
               </Button>
-              <Button variant="hero-secondary" size="xl">
-                Konsultasi Gratis
+              <Button variant="hero-secondary" size="xl" asChild>
+                <a href="https://intelligo.id/wa-mintell" target="_blank" rel="noopener noreferrer">
+                  Konsultasi Gratis
+                </a>
               </Button>
             </div>
 
