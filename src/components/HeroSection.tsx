@@ -4,7 +4,7 @@ import heroImage from "@/assets/hero-mentor.jpg";
 
 const HeroSection = () => {
   const features = [
-    { icon: BookOpen, label: "Blended Learning" },
+    { icon: BookOpen, label: "Bootcamp" },
     { icon: Users, label: "Mentor Praktisi" },
     { icon: GraduationCap, label: "Beginner Friendly" },
     { icon: Briefcase, label: "Job Ready" },
