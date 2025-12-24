@@ -1,28 +1,36 @@
 import { Monitor, Users, Zap, Calendar, User, Building2, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const programs = [{
   icon: User,
   title: "Private Course 1-on-1",
-  description: "Mentoring personal dengan custom silabus sesuai kebutuhan dan jadwal fleksibel."
+  description: "Mentoring personal dengan custom silabus sesuai kebutuhan dan jadwal fleksibel.",
+  link: "/program/private-course"
 }, {
   icon: Users,
   title: "Bootcamp Semi Private",
-  description: "Kelas kecil 3-5 orang untuk pembelajaran lebih intensif dan interaktif."
+  description: "Kelas kecil 3-5 orang untuk pembelajaran lebih intensif dan interaktif.",
+  link: "/program/bootcamp-semi-private"
 }, {
   icon: Monitor,
   title: "Bootcamp Private",
-  description: "Program eksklusif dengan perhatian penuh dari trainer profesional."
+  description: "Program eksklusif dengan perhatian penuh dari trainer profesional.",
+  link: "/program/bootcamp-private"
 }, {
   icon: Calendar,
   title: "Workshop & Mini Class",
-  description: "Event musiman dengan topik AI & Data terbaru, cocok untuk eksplorasi skill."
+  description: "Event musiman dengan topik AI & Data terbaru, cocok untuk eksplorasi skill.",
+  link: "/program/workshop"
 }, {
   icon: Zap,
   title: "Job Ready Bootcamp",
-  description: "Program intensif dengan jaminan interview kerja dan pendampingan karir."
+  description: "Program intensif dengan jaminan interview kerja dan pendampingan karir.",
+  link: "/program/job-ready-bootcamp"
 }, {
   icon: Building2,
   title: "Corporate Training",
-  description: "Pelatihan untuk perusahaan, instansi pemerintahan, startup, hingga BUMN."
+  description: "Pelatihan untuk perusahaan, instansi pemerintahan, startup, hingga BUMN.",
+  link: "/program/corporate-training"
 }];
 const ProgramSection = () => {
   return <section id="program" className="section-padding bg-secondary/30">
@@ -55,10 +63,10 @@ const ProgramSection = () => {
               </p>
 
               {/* Link */}
-              <a href="#" className="inline-flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all duration-300">
+              <Link to={program.link} className="inline-flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all duration-300">
                 Lihat Detail
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
             </div>)}
         </div>
       </div>
