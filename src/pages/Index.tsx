@@ -1,3 +1,4 @@
+import { useMemo, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import ScrollSideNav from "@/components/ScrollSideNav";
@@ -14,6 +15,12 @@ import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  const [sideNavVisible, setSideNavVisible] = useState(false);
+  const mainClassName = useMemo(
+    () => `pt-16 md:pt-20 ${sideNavVisible ? "xl:pl-[180px]" : ""}`,
+    [sideNavVisible]
+  );
+
   return (
     <>
       <Helmet>
@@ -40,10 +47,10 @@ const Index = () => {
         <Navbar />
         
         {/* Scroll Side Navigation */}
-        <ScrollSideNav />
+        <ScrollSideNav onVisibleChange={setSideNavVisible} />
 
         {/* Main Content - with top padding for fixed navbar */}
-        <main className="pt-16 md:pt-20">
+        <main className={mainClassName}>
           <HeroSection />
           <ProgramSection />
           <CurriculumSection />

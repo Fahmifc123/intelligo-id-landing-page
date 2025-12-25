@@ -9,6 +9,7 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [hoveredCategory, setHoveredCategory] = useState<string>("bootcamp");
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimerRef = useRef<number | null>(null);
   const location = useLocation();
 
   const programCategories = [
@@ -80,8 +81,19 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  const handleDropdownToggle = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
+  const openDropdown = (dropdown: string) => {
+    if (closeTimerRef.current) {
+      window.clearTimeout(closeTimerRef.current);
+      closeTimerRef.current = null;
+    }
+    setActiveDropdown(dropdown);
+  };
+
+  const scheduleCloseDropdown = (dropdown: string) => {
+    if (closeTimerRef.current) window.clearTimeout(closeTimerRef.current);
+    closeTimerRef.current = window.setTimeout(() => {
+      setActiveDropdown((current) => (current === dropdown ? null : current));
+    }, 120);
   };
 
   const isActive = (href: string) => {
@@ -117,12 +129,10 @@ const Navbar = () => {
             </Link>
 
             {/* Program Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown("program")}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
+            <div className="relative">
               <button
+                onMouseEnter={() => openDropdown("program")}
+                onMouseLeave={() => scheduleCloseDropdown("program")}
                 className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
                   activeDropdown === "program" ? "text-accent" : "text-foreground/70 hover:text-accent"
                 }`}
@@ -132,7 +142,11 @@ const Navbar = () => {
               </button>
 
               {activeDropdown === "program" && (
-                <div className="absolute top-full left-0 mt-2 w-[600px] bg-card rounded-2xl shadow-2xl border border-border/50 p-0 animate-fade-in overflow-hidden">
+                <div
+                  onMouseEnter={() => openDropdown("program")}
+                  onMouseLeave={() => scheduleCloseDropdown("program")}
+                  className="absolute top-full left-0 mt-0 pt-2 w-[600px] bg-card rounded-2xl shadow-2xl border border-border/50 p-0 animate-fade-in overflow-hidden z-50"
+                >
                   <div className="flex">
                     {/* Left side - Categories */}
                     <div className="w-56 bg-muted/30 border-r border-border/50 py-3">
@@ -189,12 +203,10 @@ const Navbar = () => {
             </Link>
 
             {/* Why Intelligo Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setActiveDropdown("why")}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
+            <div className="relative">
               <button
+                onMouseEnter={() => openDropdown("why")}
+                onMouseLeave={() => scheduleCloseDropdown("why")}
                 className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
                   activeDropdown === "why" ? "text-accent" : "text-foreground/70 hover:text-accent"
                 }`}
@@ -204,7 +216,11 @@ const Navbar = () => {
               </button>
 
               {activeDropdown === "why" && (
-                <div className="absolute top-full right-0 mt-2 w-[500px] bg-card rounded-2xl shadow-2xl border border-border/50 p-6 animate-fade-in">
+                <div
+                  onMouseEnter={() => openDropdown("why")}
+                  onMouseLeave={() => scheduleCloseDropdown("why")}
+                  className="absolute top-full right-0 mt-0 pt-2 w-[500px] bg-card rounded-2xl shadow-2xl border border-border/50 p-6 animate-fade-in z-50"
+                >
                   <div className="flex gap-6">
                     {/* Left side - Promo Card */}
                     <div className="w-48 flex-shrink-0">

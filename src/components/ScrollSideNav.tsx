@@ -33,7 +33,11 @@ const navItems: NavItem[] = [
   { id: "faq", label: "FAQ", icon: HelpCircle },
 ];
 
-const ScrollSideNav = () => {
+interface ScrollSideNavProps {
+  onVisibleChange?: (visible: boolean) => void;
+}
+
+const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   const [activeSection, setActiveSection] = useState<string>("");
   const [isVisible, setIsVisible] = useState(false);
 
@@ -43,7 +47,11 @@ const ScrollSideNav = () => {
       const heroSection = document.getElementById("hero");
       if (heroSection) {
         const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
-        setIsVisible(window.scrollY > heroBottom - 100);
+        const nextVisible = window.scrollY > heroBottom - 100;
+        setIsVisible((prev) => {
+          if (prev !== nextVisible) onVisibleChange?.(nextVisible);
+          return nextVisible;
+        });
       }
 
       // Find active section
@@ -62,7 +70,7 @@ const ScrollSideNav = () => {
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [onVisibleChange]);
 
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id);
@@ -74,7 +82,7 @@ const ScrollSideNav = () => {
   if (!isVisible) return null;
 
   return (
-    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden 2xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-2 animate-fade-in max-w-[180px]">
+    <nav className="fixed left-2 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-2 animate-fade-in max-w-[160px]">
       <div className="flex flex-col gap-1">
         {navItems.map((item) => {
           const Icon = item.icon;
