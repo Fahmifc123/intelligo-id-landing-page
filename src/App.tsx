@@ -16,6 +16,7 @@ import Workshop from "./pages/Workshop";
 import JobReadyBootcamp from "./pages/JobReadyBootcamp";
 import CorporateTraining from "./pages/CorporateTraining";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -25,8 +26,7 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
-          <Routes>
+        <BrowserRouter>          <ScrollToTop />          <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/kontak" element={<Kontak />} />
