@@ -87,6 +87,7 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   fixed 
   left-4 
   top-24 
+  bottom-6
   z-40 
   hidden xl:flex 
   flex-col 
@@ -95,10 +96,8 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   shadow-lg 
   border border-border/50 
   p-4 
-  w-[220px]
-  h-[75vh]
+  w-[160px]
   overflow-y-auto
-  animate-fade-in
 "
     >
       <div className="flex flex-col gap-1">
