@@ -1,60 +1,50 @@
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Users, FolderOpen, FileText, GraduationCap, Code, Brain, Monitor, Video } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight, Users, FolderOpen, FileText } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import logoIntelligo from "@/assets/logo-intelligo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [hoveredCategory, setHoveredCategory] = useState<string>("bootcamp");
   const dropdownRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
 
-  const bootcampItems = [
-    { 
-      title: "Bootcamp Job Ready", 
-      description: "Persiapan karir IT dengan kurikulum industri.", 
-      href: "/#program",
-      icon: GraduationCap 
+  const programCategories = [
+    {
+      id: "private",
+      title: "Private Course",
+      description: "Belajar 1-on-1 dengan mentor senior untuk hasil maksimal.",
+      items: [
+        { title: "Private Course 1-on-1", href: "/program/private-course" },
+      ]
     },
-    { 
-      title: "Bootcamp Offline", 
-      description: "Belajar langsung dengan mentor di lokasi.", 
-      href: "/#program",
-      icon: Monitor 
+    {
+      id: "bootcamp",
+      title: "Bootcamp",
+      description: "Program intensif dengan kurikulum industri dan karir support.",
+      items: [
+        { title: "Bootcamp Semi Private", href: "/program/bootcamp-semi-private" },
+        { title: "Bootcamp Private", href: "/program/bootcamp-private" },
+        { title: "Job Ready Bootcamp", href: "/program/job-ready-bootcamp" },
+      ]
     },
-    { 
-      title: "Bootcamp Course Online", 
-      description: "Bootcamp online dengan sesi live & rekaman.", 
-      href: "/#program",
-      icon: Video 
+    {
+      id: "workshop",
+      title: "Workshop & Mini Class",
+      description: "Kelas singkat untuk skill spesifik dengan biaya terjangkau.",
+      items: [
+        { title: "Workshop & Mini Class", href: "/program/workshop" },
+      ]
     },
-    { 
-      title: "Video Course", 
-      description: "Kursus mandiri berbasis video.", 
-      href: "/#program",
-      icon: Video 
-    },
-  ];
-
-  const bootcampCoursesItems = [
-    { 
-      title: "Python Basic", 
-      description: "Dasar-dasar pemrograman Python.", 
-      href: "/#curriculum",
-      icon: Code 
-    },
-    { 
-      title: "AI 101", 
-      description: "Pengenalan kecerdasan buatan.", 
-      href: "/#curriculum",
-      icon: Brain 
-    },
-    { 
-      title: "Bootcamp Data Science For Beginner", 
-      description: "Dasar-dasar Data Science & analisis data.", 
-      href: "/#program",
-      icon: GraduationCap 
+    {
+      id: "corporate",
+      title: "Corporate Training",
+      description: "Pelatihan khusus untuk perusahaan dengan kurikulum custom.",
+      items: [
+        { title: "Corporate Training", href: "/program/corporate-training" },
+      ]
     },
   ];
 
@@ -99,6 +89,8 @@ const Navbar = () => {
     return location.pathname.startsWith(href);
   };
 
+  const activeCategory = programCategories.find(cat => cat.id === hoveredCategory);
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border/50">
       <div className="section-container">
@@ -124,64 +116,59 @@ const Navbar = () => {
               Home
             </Link>
 
-            {/* Bootcamp Dropdown */}
+            {/* Program Dropdown */}
             <div className="relative">
               <button
-                onClick={() => handleDropdownToggle("bootcamp")}
+                onClick={() => handleDropdownToggle("program")}
                 className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
-                  activeDropdown === "bootcamp" ? "text-accent" : "text-foreground/70 hover:text-accent"
+                  activeDropdown === "program" ? "text-accent" : "text-foreground/70 hover:text-accent"
                 }`}
               >
-                Bootcamp
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "bootcamp" ? "rotate-180" : ""}`} />
+                Program
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "program" ? "rotate-180" : ""}`} />
               </button>
 
-              {activeDropdown === "bootcamp" && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[700px] bg-card rounded-2xl shadow-2xl border border-border/50 p-6 animate-fade-in">
-                  <div className="flex gap-8">
-                    {/* Left side - Promo Card */}
-                    <div className="w-56 flex-shrink-0">
-                      <div className="bg-gradient-to-br from-accent to-accent/80 rounded-xl p-5 text-accent-foreground h-full">
-                        <p className="text-sm opacity-90 mb-2">Tingkatkan keterampilan Anda dengan materi dari para ahli.</p>
-                        <h3 className="text-2xl font-bold mb-4">Intelligo</h3>
-                        <p className="text-xs opacity-80">
-                          Jelajahi berbagai kursus dalam analisis data, machine learning, dan big data.
-                        </p>
-                      </div>
+              {activeDropdown === "program" && (
+                <div className="absolute top-full left-0 mt-2 w-[600px] bg-card rounded-2xl shadow-2xl border border-border/50 p-0 animate-fade-in overflow-hidden">
+                  <div className="flex">
+                    {/* Left side - Categories */}
+                    <div className="w-56 bg-muted/30 border-r border-border/50 py-3">
+                      {programCategories.map((category) => (
+                        <button
+                          key={category.id}
+                          onMouseEnter={() => setHoveredCategory(category.id)}
+                          className={`w-full flex items-center justify-between px-4 py-3 text-left transition-colors ${
+                            hoveredCategory === category.id 
+                              ? "text-accent bg-accent/5" 
+                              : "text-foreground/70 hover:text-foreground hover:bg-muted/50"
+                          }`}
+                        >
+                          <span className="font-medium">{category.title}</span>
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      ))}
                     </div>
 
-                    {/* Right side - Menu Items */}
-                    <div className="flex-1 grid grid-cols-2 gap-x-6">
-                      <div className="space-y-1">
-                        {bootcampItems.map((item) => (
-                          <Link
-                            key={item.title}
-                            to={item.href}
-                            onClick={() => setActiveDropdown(null)}
-                            className="block p-3 rounded-lg hover:bg-accent/5 transition-colors group"
-                          >
-                            <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
-                              {item.title}
-                            </h4>
-                            <p className="text-sm text-foreground/60">{item.description}</p>
-                          </Link>
-                        ))}
-                      </div>
-                      <div className="space-y-1">
-                        {bootcampCoursesItems.map((item) => (
-                          <Link
-                            key={item.title}
-                            to={item.href}
-                            onClick={() => setActiveDropdown(null)}
-                            className="block p-3 rounded-lg hover:bg-accent/5 transition-colors group"
-                          >
-                            <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
-                              {item.title}
-                            </h4>
-                            <p className="text-sm text-foreground/60">{item.description}</p>
-                          </Link>
-                        ))}
-                      </div>
+                    {/* Right side - Detail */}
+                    <div className="flex-1 p-5">
+                      {activeCategory && (
+                        <>
+                          <h3 className="font-bold text-foreground mb-1">{activeCategory.title}</h3>
+                          <p className="text-sm text-foreground/60 mb-4">{activeCategory.description}</p>
+                          <div className="space-y-1">
+                            {activeCategory.items.map((item) => (
+                              <Link
+                                key={item.title}
+                                to={item.href}
+                                onClick={() => setActiveDropdown(null)}
+                                className="block py-2 text-foreground/80 hover:text-accent transition-colors font-medium"
+                              >
+                                {item.title}
+                              </Link>
+                            ))}
+                          </div>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -281,19 +268,21 @@ const Navbar = () => {
                 Home
               </Link>
 
-              {/* Mobile Bootcamp Section */}
+              {/* Mobile Program Section */}
               <div className="px-4 py-2">
-                <p className="text-xs font-semibold text-foreground/50 uppercase tracking-wider mb-2">Bootcamp</p>
-                {[...bootcampItems, ...bootcampCoursesItems].map((item) => (
-                  <Link
-                    key={item.title}
-                    to={item.href}
-                    className="block py-2 text-foreground/70 hover:text-accent transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+                <p className="text-xs font-semibold text-foreground/50 uppercase tracking-wider mb-2">Program</p>
+                {programCategories.flatMap((category) => 
+                  category.items.map((item) => (
+                    <Link
+                      key={item.title}
+                      to={item.href}
+                      className="block py-2 text-foreground/70 hover:text-accent transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  ))
+                )}
               </div>
 
               <Link
