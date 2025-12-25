@@ -6,57 +6,18 @@ import mentor3 from "@/assets/mentor-3.jpg";
 import mentor4 from "@/assets/mentor-4.jpg";
 import LogoCarousel from "./LogoCarousel";
 import useEmblaCarousel from "embla-carousel-react";
+import trainers from "@/data/trainers";
 
-const mentors = [
-  {
-    name: "Muhammad Fahmi",
-    role: "Founder & Head Learning",
-    company: "Intelligo ID & NoLimit Indonesia",
-    image: mentor1,
-    experience: "Full time Data Scientist di NoLimit Indonesia. Expert di NLP dan Data Mining.",
-    expertise: ["Python", "NLP", "Data Mining"],
-  },
-  {
-    name: "Andika Risky Sururi",
-    role: "Data Scientist",
-    company: "OLX Mobbi (Astra)",
-    image: mentor2,
-    experience: "Praktisi machine learning dan AI dengan fokus pada data science dan Python.",
-    expertise: ["Machine Learning", "AI", "Python"],
-  },
-  {
-    name: "Muhammad Ikhwan Fathulloh",
-    role: "Software Engineer & Educator",
-    company: "Universitas Teknologi Bandung",
-    image: mentor3,
-    experience: "Director Data & Information. Expert di IoT dan software architecture.",
-    expertise: ["IoT", "Software Architecture", "Python"],
-  },
-  {
-    name: "Yudy Yunardy",
-    role: "Business Analyst",
-    company: "19+ Years Banking Experience",
-    image: mentor4,
-    experience: "Expert di Trade Finance, Management Information Analyst, dan Dashboard Reporting.",
-    expertise: ["Dashboard", "Power BI", "Banking"],
-  },
-  {
-    name: "Joko Eliyanto",
-    role: "Data Scientist",
-    company: "LLM & ML Specialist",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop&crop=face",
-    experience: "Expert di analytical dashboard, machine learning, dan LLM prompt engineer.",
-    expertise: ["LLM", "Machine Learning", "Analytics"],
-  },
-  {
-    name: "Mardhani D Novianto",
-    role: "Data Scientist",
-    company: "Python & ML Expert",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face",
-    experience: "Mastering Python untuk data processing, analysis, dan machine learning models.",
-    expertise: ["Python", "Data Analysis", "ML Models"],
-  },
-];
+// Map imported trainers.json to mentor items used by the UI
+const mentors = (trainers || []).map((t) => ({
+  name: t.name || "",
+  role: t.role || "Trainer",
+  company: t.company || "",
+  image: t.photoUrl || mentor1,
+  experience: t.experience || "",
+  expertise: t.expertise || [],
+  linkedin: t.linkedin || "",
+}));
 
 const mentorCompanies = [
   { name: "Tokopedia", key: "tokopedia" as const },
@@ -177,8 +138,27 @@ const MentorSection = () => {
                     {/* Content */}
                     <div className="p-5">
                       <h3 className="text-lg font-bold text-foreground">{mentor.name}</h3>
-                      <p className="text-accent font-semibold text-sm">{mentor.role}</p>
-                      <p className="text-muted-foreground text-sm mb-3">{mentor.company}</p>
+                      {/* Show role once; show company only if different */}
+                      <p className="text-accent font-semibold text-sm mb-2">{mentor.role}</p>
+
+                      {mentor.company && mentor.company.trim().toLowerCase() !== mentor.role.trim().toLowerCase() && (
+                        <p className="text-muted-foreground text-sm mb-2">{mentor.company}</p>
+                      )}
+
+                      {/* LinkedIn */}
+                      {mentor.linkedin && (
+                        <a
+                          href={mentor.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-accent text-sm font-medium mb-3 hover:underline"
+                          aria-label={`Open ${mentor.name} LinkedIn`}
+                        >
+                          <img src="/assets/icons/linkedin.svg" alt="LinkedIn" className="w-4 h-4" />
+                          <span className="sr-only">LinkedIn</span>
+                        </a>
+                      )}
+
                       <p className="text-sm text-muted-foreground/80 line-clamp-2">
                         {mentor.experience}
                       </p>

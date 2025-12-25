@@ -68,7 +68,7 @@ const SidebarNav = () => {
   return (
     <nav 
       className={`fixed left-0 top-0 h-screen bg-card/95 backdrop-blur-md border-r border-border/50 z-50 transition-all duration-300 ${
-        isCollapsed ? "w-16" : "w-56"
+        isCollapsed ? "w-20" : "w-64"
       } hidden lg:flex flex-col`}
     >
       {/* Logo */}
@@ -78,7 +78,7 @@ const SidebarNav = () => {
             <span className="text-accent-foreground font-bold text-xl">I</span>
           </div>
           {!isCollapsed && (
-            <span className="font-bold text-lg text-foreground whitespace-nowrap">Intelligo ID</span>
+            <span className="font-bold text-xl text-foreground whitespace-nowrap">Intelligo ID</span>
           )}
         </a>
       </div>
@@ -102,21 +102,21 @@ const SidebarNav = () => {
                 >
                   {/* Active indicator line */}
                   {isActive && (
-                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-accent rounded-r-full -ml-2" />
+                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-10 bg-accent rounded-r-full -ml-3" />
                   )}
                   
-                  <Icon className={`w-5 h-5 flex-shrink-0 ${isActive ? "" : "group-hover:scale-110"} transition-transform`} />
+                  <Icon className={`w-7 h-7 flex-shrink-0 ${isActive ? "" : "group-hover:scale-110"} transition-transform`} />
                   
                   {!isCollapsed && (
-                    <span className={`text-sm font-medium whitespace-nowrap ${isActive ? "font-semibold" : ""}`}>
+                    <span className={`text-lg font-medium whitespace-nowrap ${isActive ? "font-semibold" : ""}`}>
                       {item.label}
                     </span>
                   )}
 
                   {/* Tooltip for collapsed state */}
                   {isCollapsed && (
-                    <div className="absolute left-full ml-2 px-2 py-1 bg-card border border-border rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
-                      <span className="text-sm font-medium">{item.label}</span>
+                    <div className="absolute left-full ml-3 px-3 py-2 bg-card border border-border rounded-md shadow-lg opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap z-50">
+                      <span className="text-lg font-medium">{item.label}</span>
                     </div>
                   )}
                 </button>

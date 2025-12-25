@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import YouTubeCard from "@/components/YouTubeCard";
+import trainers from "@/data/trainers";
 import { Award, Users, Target, Lightbulb } from "lucide-react";
 
 const AboutUs = () => {
@@ -27,26 +29,9 @@ const AboutUs = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Muhammad Fahmi",
-      role: "Head of Data Scientist & Head of Learning",
-      company: "Big Data Company",
-      linkedin: "https://www.linkedin.com/in/muhammad-fahmi17/"
-    },
-    {
-      name: "Mardhani Dwi Novanto",
-      role: "Data Analyst & Trainer",
-      company: "Bank BUMD",
-      linkedin: "https://www.linkedin.com/in/mardhani-dwi-novianto/"
-    },
-    {
-      name: "Andika Risky Sururi",
-      role: "Data Scientist & Trainer",
-      company: "Automotive E-Commerce",
-      linkedin: "https://www.linkedin.com/in/andikariskysururi/"
-    }
-  ];
+  // Trainers are loaded from `src/data/trainers.json` via import `trainers`
+  // Use the script `node scripts/import-trainers.js <file.xlsx>` to update this file from Excel
+  const team = trainers;
 
   return (
     <>
@@ -132,6 +117,23 @@ const AboutUs = () => {
             </div>
           </section>
 
+          {/* Video Section */}
+          <section className="py-20 md:py-28">
+            <div className="section-container">
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium mb-4">
+                  Company Video
+                </span>
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground">Our Story</h2>
+                <p className="text-foreground/70 max-w-2xl mx-auto mt-4">Tonton video singkat tentang Intelligo ID.</p>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <YouTubeCard videoUrl="https://www.youtube.com/watch?v=pur8oY3Sm4w" title="Intelligo ID - Overview" />
+              </div>
+            </div>
+          </section>
+
           {/* Team Section */}
           <section className="py-20 md:py-28 bg-card/50">
             <div className="section-container">
@@ -150,20 +152,28 @@ const AboutUs = () => {
                     key={index}
                     className="p-6 bg-background rounded-2xl border border-border/50 text-center hover:shadow-xl transition-all duration-300"
                   >
-                    <div className="w-24 h-24 rounded-full bg-accent/20 mx-auto mb-4 flex items-center justify-center">
-                      <Users className="w-12 h-12 text-accent" />
+                    <div className="w-24 h-24 rounded-full bg-accent/20 mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                      {member.photoUrl ? (
+                        <img src={member.photoUrl} alt={member.name} className="w-full h-full object-cover" />
+                      ) : (
+                        <Users className="w-12 h-12 text-accent" />
+                      )}
                     </div>
                     <h3 className="text-xl font-semibold text-foreground mb-1">{member.name}</h3>
                     <p className="text-accent font-medium mb-1">{member.role}</p>
                     <p className="text-foreground/60 text-sm mb-4">{member.company}</p>
-                    <a 
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-accent hover:underline"
-                    >
-                      LinkedIn Profile
-                    </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 hover:underline"
+                        aria-label={`Open ${member.name} LinkedIn`}
+                      >
+                        <img src="/assets/icons/linkedin.svg" alt="LinkedIn" className="w-6 h-6" style={{ filter: 'none' }} />
+                        <span className="sr-only">LinkedIn</span>
+                      </a>
+                    )} 
                   </div>
                 ))}
               </div>

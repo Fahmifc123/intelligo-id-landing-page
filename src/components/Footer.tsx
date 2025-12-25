@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Instagram, Linkedin, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   const quickLinks = [
@@ -40,8 +40,9 @@ const Footer = () => {
               <a
                 href="#"
                 className="w-10 h-10 rounded-lg bg-primary-foreground/10 flex items-center justify-center hover:bg-accent transition-colors"
+                aria-label="LinkedIn"
               >
-                <Linkedin className="w-5 h-5" />
+                <img src="/assets/icons/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
               </a>
               <a
                 href="#"
