@@ -1,17 +1,17 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { 
-  LayoutGrid, 
-  Users, 
-  BookOpen, 
-  Briefcase, 
-  MessageSquare, 
-  BarChart3, 
-  Award, 
-  DollarSign, 
-  Megaphone, 
+import {
+  LayoutGrid,
+  Users,
+  BookOpen,
+  Briefcase,
+  MessageSquare,
+  BarChart3,
+  Award,
+  DollarSign,
+  Megaphone,
   HelpCircle,
-  MessageCircle
+  MessageCircle,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -82,19 +82,23 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   if (!isVisible) return null;
 
   return (
-    <nav className="fixed left-2 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-2 animate-fade-in max-w-[160px]">
+    <nav
+      className="fixed left-2 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col 
+bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 
+p-4 animate-fade-in w-[220px]"
+    >
       <div className="flex flex-col gap-1">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
-          
+
           return (
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
               className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs font-medium transition-all duration-200 group ${
-                isActive 
-                  ? "bg-accent text-accent-foreground" 
+                isActive
+                  ? "bg-accent text-accent-foreground"
                   : "text-foreground/60 hover:bg-accent/10 hover:text-accent"
               }`}
             >
@@ -106,12 +110,7 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
       </div>
 
       <div className="border-t border-border/50 mt-3 pt-3">
-        <Button 
-          variant="accent" 
-          size="sm" 
-          className="w-full justify-center gap-2"
-          asChild
-        >
+        <Button variant="accent" size="sm" className="w-full justify-center gap-2" asChild>
           <a href="https://intelligo.id/wa-mintell" target="_blank" rel="noopener noreferrer">
             <MessageCircle className="w-4 h-4" />
             Hubungi Kami
