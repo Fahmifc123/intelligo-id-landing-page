@@ -1,19 +1,17 @@
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import {
-  LayoutGrid,
-  Users,
-  BookOpen,
-  Briefcase,
-  MessageSquare,
-  BarChart3,
-  Award,
-  DollarSign,
-  Megaphone,
-  HelpCircle,
-  MessageCircle,
-} from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+    BarChart3,
+    BookOpen,
+    Briefcase,
+    DollarSign,
+    HelpCircle,
+    LayoutGrid,
+    Megaphone,
+    MessageCircle,
+    MessageSquare,
+    Users
+} from "lucide-react";
+import { useEffect, useState } from "react";
 
 interface NavItem {
   id: string;
@@ -95,8 +93,8 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   rounded-2xl 
   shadow-lg 
   border border-border/50 
-  p-4 
-  w-[160px]
+  p-5 
+  w-[220px]
   overflow-y-auto
 "
     >
@@ -109,7 +107,7 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs font-medium transition-all duration-200 group ${
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group ${
                 isActive
                   ? "bg-accent text-accent-foreground"
                   : "text-foreground/60 hover:bg-accent/10 hover:text-accent"

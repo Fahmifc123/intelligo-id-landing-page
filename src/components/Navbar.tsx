@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, ChevronRight, Users, FolderOpen, FileText } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
 import logoIntelligo from "@/assets/logo-intelligo.png";
+import { Button } from "@/components/ui/button";
+import { CheckCircle, ChevronDown, ChevronRight, FileText, FolderOpen, Menu, Users, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,35 +14,46 @@ const Navbar = () => {
 
   const programCategories = [
     {
+      id: "bootcamp-online",
+      title: "Bootcamp Online",
+      description: "Belajar dari rumah dengan live class interaktif",
+      items: [
+        { title: "Bootcamp Malam (Weekday)", href: "/program/bootcamp-malam" },
+        { title: "Weekend Bootcamp Online", href: "/program/bootcamp-weekend" },
+        { title: "Job Ready Bootcamp Online", href: "/program/job-ready-bootcamp" },
+      ]
+    },
+    {
+      id: "bootcamp-offline",
+      title: "Bootcamp Offline",
+      description: "Tatap muka intensif dengan praktik langsung di Jakarta & Bandung",
+      items: [
+        { title: "Weekend Bootcamp Offline", href: "/program/bootcamp-offline" },
+        { title: "Weekday Bootcamp Offline", href: "/program/bootcamp-weekday" },
+      ]
+    },
+    {
       id: "private",
       title: "Private Course",
-      description: "Belajar 1-on-1 dengan mentor senior untuk hasil maksimal.",
+      description: "1-on-1 mentoring dengan jadwal fleksibel (Online & Offline)",
       items: [
-        { title: "Private Course 1-on-1", href: "/program/private-course" },
+        { title: "Private Course Online", href: "/program/private-course" },
+        { title: "Private Course Offline", href: "/program/private-course-offline" },
       ]
     },
     {
-      id: "bootcamp",
-      title: "Bootcamp",
-      description: "Program intensif dengan kurikulum industri dan karir support.",
+      id: "mini",
+      title: "Mini Bootcamp & Workshop",
+      description: "Program singkat untuk fondasi cepat dalam Data Science & AI",
       items: [
-        { title: "Bootcamp Semi Private", href: "/program/bootcamp-semi-private" },
-        { title: "Bootcamp Private", href: "/program/bootcamp-private" },
-        { title: "Job Ready Bootcamp", href: "/program/job-ready-bootcamp" },
-      ]
-    },
-    {
-      id: "workshop",
-      title: "Workshop & Mini Class",
-      description: "Kelas singkat untuk skill spesifik dengan biaya terjangkau.",
-      items: [
-        { title: "Workshop & Mini Class", href: "/program/workshop" },
+        { title: "Mini Bootcamp DS & AI", href: "/program/mini-bootcamp" },
+        { title: "Workshop Intensive", href: "/program/workshop" },
       ]
     },
     {
       id: "corporate",
       title: "Corporate Training",
-      description: "Pelatihan khusus untuk perusahaan dengan kurikulum custom.",
+      description: "Pelatihan khusus untuk perusahaan dengan kurikulum custom",
       items: [
         { title: "Corporate Training", href: "/program/corporate-training" },
       ]
@@ -192,15 +203,68 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Job Connect */}
-            <Link
-              to="/job-connect"
-              className={`px-4 py-2 font-medium transition-colors duration-200 ${
-                isActive("/job-connect") ? "text-accent" : "text-foreground/70 hover:text-accent"
-              }`}
-            >
-              Job Connect
-            </Link>
+            {/* Job Ready Dropdown */}
+            <div className="relative">
+              <button
+                onMouseEnter={() => openDropdown("jobready")}
+                onMouseLeave={() => scheduleCloseDropdown("jobready")}
+                className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
+                  activeDropdown === "jobready" ? "text-accent" : "text-foreground/70 hover:text-accent"
+                }`}
+              >
+                Job Ready
+                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === "jobready" ? "rotate-180" : ""}`} />
+              </button>
+
+              {activeDropdown === "jobready" && (
+                <div
+                  onMouseEnter={() => openDropdown("jobready")}
+                  onMouseLeave={() => scheduleCloseDropdown("jobready")}
+                  className="absolute top-full left-0 mt-0 pt-2 w-[500px] bg-card rounded-2xl shadow-2xl border border-border/50 p-6 animate-fade-in z-50"
+                >
+                  <div className="flex gap-6">
+                    {/* Left side - Promo Card */}
+                    <div className="w-48 flex-shrink-0">
+                      <div className="bg-gradient-to-br from-accent to-accent/80 rounded-xl p-5 text-accent-foreground h-full">
+                        <p className="text-sm opacity-90 mb-2">Siap karir di dunia data science dan AI</p>
+                        <h3 className="text-2xl font-bold mb-4">Job Ready</h3>
+                        <p className="text-xs opacity-80">
+                          Tools dan coaching untuk mendapatkan pekerjaan impian Anda.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Right side - Menu Items */}
+                    <div className="flex-1 space-y-1">
+                      {[
+                        { title: "Job Connect", description: "Koneksi dengan perusahaan partner", href: "/job-connect" },
+                        { title: "CV Analyzer", description: "Analisis dan optimasi CV Anda", href: "/job-ready/cv-analyzer" },
+                        { title: "Career Coaching", description: "Bimbingan persiapan karir profesional", href: "/job-ready/career-coaching" },
+                        { title: "Interview with AI", description: "Latihan interview dengan AI coach", href: "/job-ready/interview-ai" },
+                        { title: "Jaminan Job Interview", description: "Jaminan interview dengan perusahaan top", href: "/job-ready/job-guarantee" }
+                      ].map((item) => (
+                        <Link
+                          key={item.title}
+                          to={item.href}
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors group"
+                        >
+                          <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                            <CheckCircle className="w-5 h-5 text-accent" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                              {item.title}
+                            </h4>
+                            <p className="text-sm text-foreground/60">{item.description}</p>
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* Why Intelligo Dropdown */}
             <div className="relative">

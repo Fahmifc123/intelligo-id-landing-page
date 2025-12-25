@@ -1,22 +1,33 @@
-import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import Index from "./pages/Index";
-import AboutUs from "./pages/AboutUs";
-import Kontak from "./pages/Kontak";
-import PortofolioAlumni from "./pages/PortofolioAlumni";
-import JobConnect from "./pages/JobConnect";
-import PrivateCourse from "./pages/PrivateCourse";
-import BootcampSemiPrivate from "./pages/BootcampSemiPrivate";
-import BootcampPrivate from "./pages/BootcampPrivate";
-import Workshop from "./pages/Workshop";
-import JobReadyBootcamp from "./pages/JobReadyBootcamp";
-import CorporateTraining from "./pages/CorporateTraining";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
+import AboutUs from "./pages/AboutUs";
+import BootcampMalam from "./pages/BootcampMalam";
+import BootcampOffline from "./pages/BootcampOffline";
+import BootcampPrivate from "./pages/BootcampPrivate";
+import BootcampSemiPrivate from "./pages/BootcampSemiPrivate";
+import BootcampWeekday from "./pages/BootcampWeekday";
+import BootcampWeekend from "./pages/BootcampWeekend";
+import CVAnalyzer from "./pages/CVAnalyzer";
+import CareerCoaching from "./pages/CareerCoaching";
+import CorporateTraining from "./pages/CorporateTraining";
+import Index from "./pages/Index";
+import InterviewAI from "./pages/InterviewAI";
+import JobConnect from "./pages/JobConnect";
+import JobGuarantee from "./pages/JobGuarantee";
+import JobReady from "./pages/JobReady";
+import JobReadyBootcamp from "./pages/JobReadyBootcamp";
+import Kontak from "./pages/Kontak";
+import MinBootcamp from "./pages/MinBootcamp";
+import NotFound from "./pages/NotFound";
+import PortofolioAlumni from "./pages/PortofolioAlumni";
+import PrivateCourse from "./pages/PrivateCourse";
+import PrivateCourseOffline from "./pages/PrivateCourseOffline";
+import Workshop from "./pages/Workshop";
 
 const queryClient = new QueryClient();
 
@@ -31,8 +42,19 @@ const App = () => (
             <Route path="/about" element={<AboutUs />} />
             <Route path="/kontak" element={<Kontak />} />
             <Route path="/portofolio" element={<PortofolioAlumni />} />
+            <Route path="/job-ready" element={<JobReady />} />
             <Route path="/job-connect" element={<JobConnect />} />
+            <Route path="/job-ready/cv-analyzer" element={<CVAnalyzer />} />
+            <Route path="/job-ready/career-coaching" element={<CareerCoaching />} />
+            <Route path="/job-ready/interview-ai" element={<InterviewAI />} />
+            <Route path="/job-ready/job-guarantee" element={<JobGuarantee />} />
+            <Route path="/program/bootcamp-malam" element={<BootcampMalam />} />
+            <Route path="/program/bootcamp-weekend" element={<BootcampWeekend />} />
+            <Route path="/program/bootcamp-offline" element={<BootcampOffline />} />
+            <Route path="/program/bootcamp-weekday" element={<BootcampWeekday />} />
             <Route path="/program/private-course" element={<PrivateCourse />} />
+            <Route path="/program/private-course-offline" element={<PrivateCourseOffline />} />
+            <Route path="/program/mini-bootcamp" element={<MinBootcamp />} />
             <Route path="/program/bootcamp-semi-private" element={<BootcampSemiPrivate />} />
             <Route path="/program/bootcamp-private" element={<BootcampPrivate />} />
             <Route path="/program/workshop" element={<Workshop />} />

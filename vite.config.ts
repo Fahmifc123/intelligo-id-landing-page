@@ -8,6 +8,11 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    // Enable HMR with detailed logging
+    middlewareMode: false,
+    watch: {
+      usePolling: false,
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
@@ -15,4 +20,10 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Better error reporting
+  define: {
+    __DEV__: mode === "development",
+  },
+  // Enable source maps in development for better debugging
+  sourcemap: mode === "development" ? "inline" : false,
 }));

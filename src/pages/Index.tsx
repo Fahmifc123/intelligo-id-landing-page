@@ -1,23 +1,24 @@
-import { useMemo, useState } from "react";
-import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
-import ScrollSideNav from "@/components/ScrollSideNav";
-import HeroSection from "@/components/HeroSection";
-import ProgramSection from "@/components/ProgramSection";
-import CurriculumSection from "@/components/CurriculumSection";
+import AlumniLogosShowcase from "@/components/AlumniLogosShowcase";
 import CareerSection from "@/components/CareerSection";
-import TestimonialSection from "@/components/TestimonialSection";
-import StatsSection from "@/components/StatsSection";
-import MentorSection from "@/components/MentorSection";
-import PricingSection from "@/components/PricingSection";
-import PromoSection from "@/components/PromoSection";
+import CurriculumSection from "@/components/CurriculumSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
+import HeroSection from "@/components/HeroSection";
+import MentorSection from "@/components/MentorSection";
+import Navbar from "@/components/Navbar";
+import PricingSection from "@/components/PricingSection";
+import ProgramSection from "@/components/ProgramSection";
+import PromoSection from "@/components/PromoSection";
+import ScrollSideNav from "@/components/ScrollSideNav";
+import StatsSection from "@/components/StatsSection";
+import TestimonialSection from "@/components/TestimonialSection";
+import { useMemo, useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const Index = () => {
   const [sideNavVisible, setSideNavVisible] = useState(false);
   const mainClassName = useMemo(
-    () => `pt-16 md:pt-20 ${sideNavVisible ? "xl:pl-[180px]" : ""}`,
+    () => `pt-16 md:pt-20 ${sideNavVisible ? "xl:pl-[260px]" : ""}`,
     [sideNavVisible]
   );
 
@@ -56,6 +57,7 @@ const Index = () => {
           <CurriculumSection />
           <CareerSection />
           <TestimonialSection />
+          <AlumniLogosShowcase />
           <StatsSection />
           <MentorSection />
           <PricingSection />
