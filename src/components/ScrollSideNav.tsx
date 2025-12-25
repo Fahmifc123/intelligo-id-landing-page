@@ -82,11 +82,7 @@ const ScrollSideNav = ({ onVisibleChange }: ScrollSideNavProps) => {
   if (!isVisible) return null;
 
   return (
-    <nav
-      className="fixed left-2 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col 
-bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 
-p-4 animate-fade-in w-[220px]"
-    >
+    <nav className="fixed left-2 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-2 animate-fade-in max-w-[160px]">
       <div className="flex flex-col gap-1">
         {navItems.map((item) => {
           const Icon = item.icon;
