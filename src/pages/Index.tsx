@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
+import ScrollSideNav from "@/components/ScrollSideNav";
 import HeroSection from "@/components/HeroSection";
 import ProgramSection from "@/components/ProgramSection";
 import CurriculumSection from "@/components/CurriculumSection";
@@ -37,6 +38,9 @@ const Index = () => {
       <div className="min-h-screen bg-background">
         {/* Top Navbar */}
         <Navbar />
+        
+        {/* Scroll Side Navigation */}
+        <ScrollSideNav />
 
         {/* Main Content - with top padding for fixed navbar */}
         <main className="pt-16 md:pt-20">
