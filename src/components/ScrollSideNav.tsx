@@ -74,7 +74,7 @@ const ScrollSideNav = () => {
   if (!isVisible) return null;
 
   return (
-    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-3 animate-fade-in">
+    <nav className="fixed left-4 top-1/2 -translate-y-1/2 z-40 hidden 2xl:flex flex-col bg-card/95 backdrop-blur-md rounded-2xl shadow-lg border border-border/50 p-2 animate-fade-in max-w-[180px]">
       <div className="flex flex-col gap-1">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -84,7 +84,7 @@ const ScrollSideNav = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 group ${
+              className={`flex items-center gap-2 px-2.5 py-2 rounded-lg text-xs font-medium transition-all duration-200 group ${
                 isActive 
                   ? "bg-accent text-accent-foreground" 
                   : "text-foreground/60 hover:bg-accent/10 hover:text-accent"

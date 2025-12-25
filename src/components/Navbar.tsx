@@ -117,9 +117,12 @@ const Navbar = () => {
             </Link>
 
             {/* Program Dropdown */}
-            <div className="relative">
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("program")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
               <button
-                onClick={() => handleDropdownToggle("program")}
                 className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
                   activeDropdown === "program" ? "text-accent" : "text-foreground/70 hover:text-accent"
                 }`}
@@ -186,9 +189,12 @@ const Navbar = () => {
             </Link>
 
             {/* Why Intelligo Dropdown */}
-            <div className="relative">
+            <div 
+              className="relative"
+              onMouseEnter={() => setActiveDropdown("why")}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
               <button
-                onClick={() => handleDropdownToggle("why")}
                 className={`px-4 py-2 font-medium transition-colors duration-200 flex items-center gap-1 ${
                   activeDropdown === "why" ? "text-accent" : "text-foreground/70 hover:text-accent"
                 }`}
