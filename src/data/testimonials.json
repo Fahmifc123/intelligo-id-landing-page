@@ -5,19 +5,14 @@
       "name": "Muhammad Vito Aristawidya",
       "role": "Data Scientist",
       "batch": "Batch 5",
-      "content": "Bootcamp dIntelligo sangat menyenangkan dan memudahkan bagi saya yang masih beginner, selain itu mentor-mentornya juga mudah dimengerti saat memberikan materi.",
+      "content": "Bootcamp di Intelligo sangat menyenangkan dan memudahkan bagi saya yang masih beginner, selain itu mentor-mentornya juga mudah dimengerti saat memberikan materi.",
       "photo": "/assets/foto-alumni/muhammad-vito.jpg",
       "portfolio": {
         "title": "E-tail Explorer: Navigating E-commerce Customer Interactions",
         "description": "Tim Intelligo ID sedang melakukan penelitian terhadap Interaksi customer di E-Commerce secara online. Strategi untuk meningkatkan kepuasan pelanggan dan retensi pelanggan.",
         "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
         "type": "pdf",
-        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Final%20Project%20Muhammad%20Vito%20Aristawidya.pdf",
-        "slides": [
-          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
-        ]
+        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Final%20Project%20Muhammad%20Vito%20Aristawidya.pdf"
       }
     },
     {
@@ -32,11 +27,7 @@
         "description": "Melakukan promosi kepada karyawan dengan menggunakan pendekatan machine learning untuk mencari karyawan yang layak di promosi berdasarkan data mereka.",
         "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
         "type": "pdf",
-        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Fahmi%20Hammam%20final%20project%20PPT%20-%20Fahmi%20hammam%20t.pdf",
-        "slides": [
-          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
-        ]
+        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Fahmi%20Hammam%20final%20project%20PPT%20-%20Fahmi%20hammam%20t.pdf"
       }
     },
     {
@@ -51,12 +42,7 @@
         "description": "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023 menggunakan metode prediksi linear regresi.",
         "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
         "type": "pdf",
-        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Intelligo%20(Draft)-%20Final%20Project%20-%20Zaki%20Maulana%20Hidayat.pptx.pdf",
-        "slides": [
-          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-          "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
-        ]
+        "fileUrl": "https://topycdhqrgtlllmslwkt.supabase.co/storage/v1/object/public/alumni-pdfs/Intelligo%20(Draft)-%20Final%20Project%20-%20Zaki%20Maulana%20Hidayat.pptx.pdf"
       }
     }
   ]

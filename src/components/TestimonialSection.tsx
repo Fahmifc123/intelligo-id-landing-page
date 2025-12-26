@@ -217,53 +217,25 @@ const TestimonialSection = () => {
             {/* Portfolio Description */}
             <p className="text-muted-foreground mb-6">{selectedPortfolio?.portfolio.description}</p>
 
-            {/* Slides Viewer */}
-            {selectedPortfolio?.portfolio.slides && (
-              <div className="relative">
-                <div className="bg-secondary rounded-xl overflow-hidden">
-                  <img
-                    src={selectedPortfolio.portfolio.slides[currentSlide]}
-                    alt={`Slide ${currentSlide + 1}`}
-                    className="w-full h-auto max-h-[400px] object-cover"
-                  />
-                </div>
-
-                {/* Slide Navigation */}
-                <div className="flex items-center justify-between mt-4">
-                  <Button variant="outline" size="icon" onClick={prevSlide} className="rounded-full">
-                    <ChevronLeft className="w-5 h-5" />
-                  </Button>
-
-                  <div className="flex items-center gap-2">
-                    {selectedPortfolio.portfolio.slides.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentSlide(idx)}
-                        className={`w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                          idx === currentSlide ? "bg-accent w-6" : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-                        }`}
-                      />
-                    ))}
-                  </div>
-
-                  <Button variant="outline" size="icon" onClick={nextSlide} className="rounded-full">
-                    <ChevronRight className="w-5 h-5" />
-                  </Button>
-                </div>
-
-                {/* Slide Counter */}
-                <p className="text-center text-sm text-muted-foreground mt-2">
-                  Slide {currentSlide + 1} dari {selectedPortfolio.portfolio.slides.length}
-                </p>
+            {/* PDF Viewer */}
+            {selectedPortfolio?.portfolio.type === "pdf" && (
+              <div className="bg-secondary rounded-xl overflow-hidden mb-6">
+                <iframe
+                  src={`${selectedPortfolio.portfolio.fileUrl}#toolbar=1&navpanes=0`}
+                  className="w-full h-[600px] border-0"
+                  title="Portfolio PDF"
+                />
               </div>
             )}
 
             {/* Download Button */}
             <div className="flex justify-center mt-6 pb-2">
-              <Button variant="accent" className="gap-2 flex-shrink-0">
-                <FileText className="w-4 h-4" />
-                Download {selectedPortfolio?.portfolio.type.toUpperCase()}
-              </Button>
+              <a href={selectedPortfolio?.portfolio.fileUrl} target="_blank" rel="noopener noreferrer" download>
+                <Button variant="accent" className="gap-2 flex-shrink-0">
+                  <FileText className="w-4 h-4" />
+                  Download {selectedPortfolio?.portfolio.type.toUpperCase()}
+                </Button>
+              </a>
             </div>
           </div>
         </DialogContent>
