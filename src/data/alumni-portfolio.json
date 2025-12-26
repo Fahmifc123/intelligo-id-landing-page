@@ -3,120 +3,110 @@
     "title": "E-tail Explorer: Navigating E-commerce Customer Interactions",
     "author": "Muhammad Vito Aristawidya",
     "batch": "Batch 5",
-    "tags": ["Data Science", "Python", "Analytics", "Business"],
+    "tags": ["Data Science", "Python", "Analytics", "E-Commerce"],
     "category": "E-Commerce",
-    "description": "Analisis mendalam tentang interaksi pelanggan e-commerce untuk meningkatkan pengalaman pengguna dan konversi. Project ini mengeksplorasi pola pembelian, customer journey, dan rekomendasi produk.",
-    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/03/Final-Project-Muhammad-Vito-Aristawidya.pptx",
-    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    "description": "Tim Intelligo ID sedang melakukan penelitian terhadap Interaksi customer di E-Commerce secara online. Strategi untuk meningkatkan kepuasan pelanggan dan retensi pelanggan.",
+    "pdfUrl": "https://drive.google.com/open?id=18LVT9YOOjntkDqFAaE15KisxeYPijmHc",
+    "photo": "/assets/foto-alumni/muhammad-vito.jpg"
   },
   {
     "title": "Unlocking Employee Growth: ML Approach to Promotion",
-    "author": "Fahmi Hamam",
+    "author": "Fahmi Hammam Taqiyuddin",
     "batch": "Batch 6",
-    "tags": ["Data Science", "Python", "Machine Learning", "HR Analytics"],
+    "tags": ["Machine Learning", "Python", "HR Analytics", "Classification"],
     "category": "Human Resources",
-    "description": "Pendekatan machine learning untuk memprediksi dan mengoptimalkan promosi karyawan dalam perusahaan. Model ini membantu HR dalam pengambilan keputusan berbasis data.",
-    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/03/Fahmi-Hammam-final-project-PPT-Fahmi-hammam-t.pdf",
-    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+    "description": "Melakukan promosi kepada karyawan dengan menggunakan pendekatan machine learning untuk mencari karyawan yang layak di promosi berdasarkan data mereka.",
+    "pdfUrl": "https://drive.google.com/open?id=1d0EB_5K00fwFTUCVyC4XOlKqBJaRrm6t",
+    "photo": "/assets/foto-alumni/fahmi-hammam.jpg"
   },
   {
     "title": "Integrated Insights: University Rankings and Student Performance Analysis (2018-2023)",
     "author": "Zaki Maulana Hidayat",
     "batch": "Batch 6",
-    "tags": ["Data Science", "Python", "Analytics", "Education"],
+    "tags": ["Data Science", "Python", "Analytics", "Prediction"],
     "category": "Education",
-    "description": "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023. Menggunakan berbagai metrik untuk mengidentifikasi faktor-faktor keberhasilan akademik.",
-    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/02/Intelligo-Final-Project-Zaki-Maulana-Hidayat.pdf",
-    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+    "description": "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023 menggunakan metode prediksi linear regresi.",
+    "pdfUrl": "https://drive.google.com/open?id=1OAolCLzxbPRWEiUpXcjTb-dr6wF9O3IC",
+    "photo": "/assets/foto-alumni/zaki-maulana.jpg"
   },
   {
-    "title": "Customer Segmentation using K-Means Clustering",
+    "title": "Navigating E-commerce Customer Interaction",
+    "author": "Rangga Pratama",
+    "batch": "Batch 8",
+    "tags": ["Data Analysis", "E-Commerce", "Customer Insights"],
+    "category": "E-Commerce",
+    "description": "Analisis interaksi pembeli di dalam marketplace untuk memahami tingkat kepuasan pelanggan dalam membeli barang elektronik.",
+    "pdfUrl": "https://drive.google.com/open?id=1OVSi0SxjUNZ-AGo0pOLMQOjKF9keU-b2",
+    "photo": "/assets/foto-alumni/rangga-pratama.jpg"
+  },
+  {
+    "title": "Optimalisasi Klasifikasi Kepuasan Pelanggan Berbasis SVM",
+    "author": "Mohammad Sufa Ammar Habibi",
+    "batch": "Batch 9",
+    "tags": ["Machine Learning", "SVM", "E-Commerce", "Classification"],
+    "category": "E-Commerce",
+    "description": "Menganalisis faktor-faktor yang mempengaruhi kepuasan pelanggan dalam e-commerce menggunakan metode SVM untuk klasifikasi tingkat kepuasan pelanggan.",
+    "pdfUrl": "https://drive.google.com/open?id=1qUv9uO3pxLYEUgxfj8QTrVAOo0uVwNTY",
+    "photo": "/assets/foto-alumni/sufa-ammar.jpg"
+  },
+  {
+    "title": "Analisis Customer untuk Segmentasi Pelanggan",
     "author": "Aryandhita Kinanti Putri",
     "batch": "Batch 7",
-    "tags": ["Data Science", "Clustering", "Marketing", "Python"],
+    "tags": ["Clustering", "EDA", "Marketing", "Python"],
     "category": "Marketing",
-    "description": "Implementasi K-Means clustering untuk segmentasi pelanggan dan strategi marketing yang lebih targeted. Menghasilkan 5 segmen pelanggan dengan karakteristik unik.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+    "description": "Menganalisis data pada latar belakang customer untuk mendapatkan insight yang bermanfaat untuk keputusan segmentasi pelanggan menggunakan clustering.",
+    "pdfUrl": "https://drive.google.com/open?id=1Oso25WIPKVUGtgM9MWy2r87UgS-LM3kX",
+    "photo": "/assets/foto-alumni/aryandhita-kinanti.jpg"
   },
   {
-    "title": "Sentiment Analysis on Social Media Reviews",
-    "author": "Ahmad Rizki",
-    "batch": "Batch 7",
-    "tags": ["NLP", "Python", "Deep Learning", "Analytics"],
-    "category": "NLP",
-    "description": "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media. Menggunakan BERT untuk akurasi tinggi dalam klasifikasi sentimen.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    "title": "Analisis dan Prediksi Pola Karyawan Pulang Lebih Awal Menggunakan Model ARIMA",
+    "author": "Sonya Oktavia",
+    "batch": "Batch 8",
+    "tags": ["Time Series", "ARIMA", "Forecasting", "HR Analytics"],
+    "category": "Human Resources",
+    "description": "Memprediksi pola karyawan yang pulang lebih awal dengan ARIMA untuk perencanaan tenaga kerja dan kebijakan kehadiran.",
+    "pdfUrl": "https://drive.google.com/open?id=1qd_ckqskuBZGyU7NZY5A5Y4veddudx2p",
+    "photo": "/assets/foto-alumni/sonya-oktavia.jpg"
   },
   {
-    "title": "Sales Forecasting with Time Series Analysis",
-    "author": "Dewi Sartika",
-    "batch": "Batch 5",
-    "tags": ["Time Series", "Forecasting", "Python", "Business"],
-    "category": "Finance",
-    "description": "Prediksi penjualan menggunakan analisis time series untuk perencanaan bisnis yang lebih akurat. Menggunakan ARIMA dan Prophet untuk prediksi 12 bulan ke depan.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    "title": "Fraud Detection System using Random Forest",
-    "author": "Budi Santoso",
-    "batch": "Batch 5",
-    "tags": ["Machine Learning", "Python", "Security", "Finance"],
-    "category": "Finance",
-    "description": "Sistem deteksi fraud menggunakan Random Forest dengan akurasi 98%. Implementasi real-time monitoring untuk transaksi mencurigakan.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    "title": "Recommendation Engine for Streaming Platform",
-    "author": "Lisa Permata",
-    "batch": "Batch 6",
-    "tags": ["Machine Learning", "Python", "Recommendation", "Entertainment"],
-    "category": "Entertainment",
-    "description": "Membangun recommendation engine untuk platform streaming menggunakan collaborative filtering dan content-based filtering.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    "title": "Predictive Maintenance for Manufacturing",
-    "author": "Rudi Hartono",
-    "batch": "Batch 7",
-    "tags": ["IoT", "Machine Learning", "Python", "Manufacturing"],
-    "category": "Manufacturing",
-    "description": "Sistem predictive maintenance menggunakan sensor data dan machine learning untuk memprediksi kerusakan mesin sebelum terjadi.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    "title": "Unlocking Employee Growth: ML Approach to Promotions",
+    "author": "Bayu Nusman",
+    "batch": "Batch 10",
+    "tags": ["Machine Learning", "Gradient Boosting", "HR Analytics"],
+    "category": "Human Resources",
+    "description": "Proyek menggunakan Machine Learning untuk menganalisis dan memprediksi promosi karyawan dengan akurasi 93,40% menggunakan Gradient Boosting Classifier.",
+    "pdfUrl": "https://drive.google.com/open?id=1hRvFehQI6YUW5h8kOH4qxYO12ekKUHtS",
+    "photo": "/assets/foto-alumni/bayu-nusman.jpg"
   },
   {
     "title": "Customer Churn Prediction Model",
     "author": "Siti Nurhaliza",
     "batch": "Batch 5",
-    "tags": ["Machine Learning", "Python", "Analytics", "Telecom"],
+    "tags": ["Machine Learning", "Prediction", "Telecom", "Analytics"],
     "category": "Telecom",
-    "description": "Model prediksi churn pelanggan telekomunikasi dengan akurasi 92%. Membantu perusahaan mengidentifikasi pelanggan yang berisiko berpindah.",
+    "description": "Model prediksi churn pelanggan telekomunikasi dengan akurasi 92% untuk membantu perusahaan mengidentifikasi pelanggan yang berisiko berpindah.",
     "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
-  },
-  {
-    "title": "Image Classification for Medical Diagnosis",
-    "author": "Dr. Andi Wijaya",
-    "batch": "Batch 6",
-    "tags": ["Deep Learning", "Computer Vision", "Python", "Healthcare"],
-    "category": "Healthcare",
-    "description": "Klasifikasi gambar X-ray menggunakan CNN untuk membantu diagnosis penyakit paru-paru dengan akurasi 95%.",
-    "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+    "photo": "/assets/foto-alumni/siti-nurhaliza.jpg"
   },
   {
     "title": "Supply Chain Optimization Dashboard",
     "author": "Maria Christina",
     "batch": "Batch 7",
-    "tags": ["Data Visualization", "Python", "Logistics", "Dashboard"],
+    "tags": ["Data Visualization", "Dashboard", "Logistics", "Python"],
     "category": "Logistics",
-    "description": "Dashboard interaktif untuk optimasi supply chain menggunakan Tableau dan Python. Mengurangi biaya logistik hingga 15%.",
+    "description": "Dashboard interaktif untuk optimasi supply chain menggunakan Tableau dan Python, mengurangi biaya logistik hingga 15%.",
     "pdfUrl": "",
-    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+    "photo": "/assets/foto-alumni/maria-christina.jpg"
+  },
+  {
+    "title": "Sentiment Analysis on Social Media Reviews",
+    "author": "Ahmad Rizki",
+    "batch": "Batch 7",
+    "tags": ["NLP", "Deep Learning", "Analytics", "Python"],
+    "category": "NLP",
+    "description": "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media menggunakan BERT.",
+    "pdfUrl": "",
+    "photo": "/assets/foto-alumni/ahmad-rizki.jpg"
   }
 ]
