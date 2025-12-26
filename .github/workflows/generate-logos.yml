@@ -1,0 +1,63 @@
+name: Auto-Generate Logo JSON
+
+on:
+  push:
+    paths:
+      - 'public/assets/logo-alumni/**'
+      - 'public/assets/logo-trainer/**'
+    branches:
+      - main
+      - develop
+  pull_request:
+    paths:
+      - 'public/assets/logo-alumni/**'
+      - 'public/assets/logo-trainer/**'
+
+jobs:
+  generate-logos:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: 📝 Generate logo JSON files
+        run: node scripts/generate-logos-json.js
+
+      - name: ✅ Check if JSON files changed
+        id: check_changes
+        run: |
+          if git diff --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 📤 Commit and push if JSON changed
+        if: steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add src/data/alumni-logos.json src/data/trainer-logos.json
+          git commit -m "chore: auto-generate logo JSON files"
+          git push
+
+      - name: 💬 Comment on PR
+        if: github.event_name == 'pull_request' && steps.check_changes.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ Logo JSON files have been automatically generated and updated!'
+            })

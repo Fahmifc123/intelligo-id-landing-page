@@ -1,38 +1,30 @@
-import { useState, useCallback, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import mentor1 from "@/assets/mentor-1.jpg";
-import mentor2 from "@/assets/mentor-2.jpg";
-import mentor3 from "@/assets/mentor-3.jpg";
-import mentor4 from "@/assets/mentor-4.jpg";
-import LogoCarousel from "./LogoCarousel";
+import trainerLogosData from "@/data/trainer-logos.json";
+import trainers from "@/data/trainers.json";
 import useEmblaCarousel from "embla-carousel-react";
-import trainers from "@/data/trainers";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
+import LogoCarousel from "./LogoCarousel";
 
 // Map imported trainers.json to mentor items used by the UI
-const mentors = (trainers || []).map((t) => ({
+const mentors = (trainers || []).map((t: any) => ({
   name: t.name || "",
   role: t.role || "Trainer",
   company: t.company || "",
   image: t.photoUrl || mentor1,
-  experience: t.experience || "",
+  experience: t.experience || t.role || "",
   expertise: t.expertise || [],
   linkedin: t.linkedin || "",
 }));
 
-const mentorCompanies = [
-  { name: "Tokopedia", key: "tokopedia" as const },
-  { name: "Gojek", key: "gojek" as const },
-  { name: "Shopee", key: "shopee" as const },
-  { name: "Traveloka", key: "traveloka" as const },
-  { name: "Microsoft", key: "microsoft" as const },
-  { name: "Google", key: "google" as const },
-  { name: "Amazon", key: "amazon" as const },
-  { name: "Meta", key: "meta" as const },
-  { name: "Grab", key: "grab" as const },
-  { name: "Bukalapak", key: "bukalapak" as const },
-  { name: "Telkom", key: "telkom" as const },
-  { name: "Bank Mandiri", key: "mandiri" as const },
-];
+// Map trainer logos from JSON for carousel
+const mentorCompanies = (trainerLogosData.trainerLogos || []).map((logo: any) => ({
+  name: logo.name,
+  key: logo.name
+    .toLowerCase()
+    .replace(/\s+/g, "")
+    .replace(/[^a-z0-9]/g, ""),
+}));
 
 const MentorSection = () => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ 
@@ -64,12 +56,12 @@ const MentorSection = () => {
   }, [emblaApi, onSelect]);
 
   return (
-    <section id="mentor" className="section-padding bg-secondary/30">
+    <section id="trainer" className="section-padding bg-secondary/30">
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Mentor Praktisi Ahli
+            Trainer Praktisi Ahli
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Belajar langsung dari praktisi yang berpengalaman di perusahaan-perusahaan teknologi terkemuka.
@@ -79,7 +71,7 @@ const MentorSection = () => {
         {/* Mentor Companies Carousel */}
         <div className="mb-12">
           <p className="text-center text-sm text-muted-foreground mb-6 uppercase tracking-wider">
-            Mentor kami berasal dari
+            Trainer kami berasal dari
           </p>
           <LogoCarousel 
             logos={mentorCompanies} 
@@ -89,7 +81,7 @@ const MentorSection = () => {
           />
         </div>
 
-        {/* Mentors Carousel */}
+        {/* Trainers Carousel */}
         <div className="relative px-4 md:px-16">
           {/* Navigation Buttons */}
           <button

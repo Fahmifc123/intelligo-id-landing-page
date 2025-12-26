@@ -1,0 +1,63 @@
+{
+  "testimonials": [
+    {
+      "id": "testimonial-1",
+      "name": "Rizky Pratama",
+      "role": "Data Analyst di Tokopedia",
+      "batch": "Batch 12 - Bootcamp Data Science",
+      "content": "Keren sangat! Materinya sangat terstruktur dan mentor-mentornya berpengalaman. Dalam 3 bulan setelah lulus, saya langsung dapat kerja!",
+      "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      "portfolio": {
+        "title": "E-Commerce Sales Dashboard",
+        "description": "Dashboard interaktif untuk analisis penjualan e-commerce menggunakan Python, Pandas, dan Tableau. Proyek ini menganalisis data 1 juta+ transaksi.",
+        "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        "type": "pdf",
+        "fileUrl": "#",
+        "slides": [
+          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+        ]
+      }
+    },
+    {
+      "id": "testimonial-2",
+      "name": "Sinta Dewi",
+      "role": "ML Engineer di Gojek",
+      "batch": "Batch 8 - Bootcamp AI & Machine Learning",
+      "content": "Program bootcamp ini benar-benar mengubah karir saya. Dari non-tech background hingga jadi ML Engineer dalam waktu singkat!",
+      "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
+      "portfolio": {
+        "title": "Customer Churn Prediction Model",
+        "description": "Machine learning model untuk memprediksi customer churn dengan akurasi 89%. Menggunakan XGBoost dan feature engineering advanced.",
+        "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        "type": "pdf",
+        "fileUrl": "#",
+        "slides": [
+          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
+        ]
+      }
+    },
+    {
+      "id": "testimonial-3",
+      "name": "Budi Santoso",
+      "role": "Data Scientist di Bukalapak",
+      "batch": "Batch 15 - Job Ready Program",
+      "content": "Pembelajaran yang praktis dan langsung bisa diterapkan. Instruktur sangat responsif dan membantu kami mempersiapkan interview.",
+      "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      "portfolio": {
+        "title": "Recommendation Engine",
+        "description": "Sistem rekomendasi produk menggunakan collaborative filtering dan content-based approach dengan Python.",
+        "thumbnail": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+        "type": "ppt",
+        "fileUrl": "#",
+        "slides": [
+          "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+          "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop"
+        ]
+      }
+    }
+  ]
+}

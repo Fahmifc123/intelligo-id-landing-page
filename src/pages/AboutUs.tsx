@@ -1,9 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import YouTubeCard from "@/components/YouTubeCard";
-import trainers from "@/data/trainers";
-import { Award, Users, Target, Lightbulb } from "lucide-react";
+import trainers from "@/data/trainers.json";
+import { Award, Lightbulb, Target, Users } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 const AboutUs = () => {
   const values = [
@@ -193,19 +193,26 @@ const AboutUs = () => {
                   </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-3 gap-6">
                   <div className="p-6 bg-card rounded-2xl border border-border/50">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Head Office</h3>
-                    <p className="text-foreground/70">
-                      Creya Coworking Space, Jl. K.H. Ahmad Dahlan No.20, Malabar, 
-                      Kec. Lengkong, Kota Bandung, Jawa Barat 40262
+                    <h3 className="text-lg font-semibold text-foreground mb-3 text-accent">Head Office</h3>
+                    <p className="text-sm text-foreground/70 mb-2 font-medium">Creya Coworking Space</p>
+                    <p className="text-sm text-foreground/60">
+                      Jl. K.H. Ahmad Dahlan No.20, Malabar, Kec. Lengkong, Kota Bandung, Jawa Barat 40262
                     </p>
                   </div>
                   <div className="p-6 bg-card rounded-2xl border border-border/50">
-                    <h3 className="text-lg font-semibold text-foreground mb-3">Training Center</h3>
-                    <p className="text-foreground/70">
-                      Nindya Biodistrict Hotel, Jl. Khp Hasan Mustopa No.57, Neglasari, 
-                      Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124
+                    <h3 className="text-lg font-semibold text-foreground mb-3 text-accent">Training Center Bandung</h3>
+                    <p className="text-sm text-foreground/70 mb-2 font-medium">Nindya Biodistrict Hotel</p>
+                    <p className="text-sm text-foreground/60">
+                      Jl. Khp Hasan Mustopa No.57, Neglasari, Kec. Cibeunying Kaler, Kota Bandung, Jawa Barat 40124
+                    </p>
+                  </div>
+                  <div className="p-6 bg-card rounded-2xl border border-border/50">
+                    <h3 className="text-lg font-semibold text-foreground mb-3 text-accent">Training Center Jakarta</h3>
+                    <p className="text-sm text-foreground/70 mb-2 font-medium">Coworking Space by EKSCO, Gedung EST JAKARTA</p>
+                    <p className="text-sm text-foreground/60">
+                      Jl. Cililitan Besar No.2, Makasar, East Jakarta City, Jakarta 13650
                     </p>
                   </div>
                 </div>

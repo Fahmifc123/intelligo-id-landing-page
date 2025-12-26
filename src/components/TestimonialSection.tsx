@@ -130,12 +130,12 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-// Import alumni logos from public/assets/logo-alumni/
-import alumniLogosData from "@/assets/logos/alumni-logos";
+// Import alumni logos from JSON file
+import alumniLogosData from "@/data/alumni-logos.json";
 
-const alumniCompanies = alumniLogosData.map((logo) => ({
+const alumniCompanies = alumniLogosData.alumniLogos.map((logo) => ({
   name: logo.name,
-  src: logo.src,
+  src: logo.logo,
 }));
 
 const TestimonialSection = () => {

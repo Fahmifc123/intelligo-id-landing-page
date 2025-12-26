@@ -25,7 +25,7 @@ const navItems: NavItem[] = [
   { id: "career", label: "Karir Support", icon: Briefcase },
   { id: "testimoni", label: "Testimoni", icon: MessageSquare },
   { id: "stats", label: "Statistik", icon: BarChart3 },
-  { id: "mentor", label: "Mentor", icon: Users },
+  { id: "trainer", label: "Trainer", icon: Users },
   { id: "pricing", label: "Harga", icon: DollarSign },
   { id: "promo", label: "Promo", icon: Megaphone },
   { id: "faq", label: "FAQ", icon: HelpCircle },

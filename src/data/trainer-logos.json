@@ -1,0 +1,115 @@
+{
+  "trainerLogos": [
+    {
+      "id": "logo-1",
+      "name": "1193",
+      "logo": "/assets/logo-trainer/1193.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-2",
+      "name": "Bank Mandiri logo",
+      "logo": "/assets/logo-trainer/Bank_Mandiri_logo.svg.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-3",
+      "name": "Bca",
+      "logo": "/assets/logo-trainer/bca.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-4",
+      "name": "Bukalapak",
+      "logo": "/assets/logo-trainer/bukalapak.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-5",
+      "name": "Gojek logo 2022",
+      "logo": "/assets/logo-trainer/Gojek_logo_2022.svg.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-6",
+      "name": "Go To logo",
+      "logo": "/assets/logo-trainer/GoTo_logo.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-7",
+      "name": "Grab",
+      "logo": "/assets/logo-trainer/grab.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-8",
+      "name": "Logo of P T Astra International Tbk terbaru 2025",
+      "logo": "/assets/logo-trainer/Logo_of_PT_Astra_International_Tbk_terbaru_2025.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-9",
+      "name": "Logo ovo purple",
+      "logo": "/assets/logo-trainer/Logo_ovo_purple.svg.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-10",
+      "name": "No Limit- Logo- Full- Color-2-scaled",
+      "logo": "/assets/logo-trainer/NoLimit-Logo-Full-Color-2-scaled.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-11",
+      "name": "Pt bank bpd diy cover",
+      "logo": "/assets/logo-trainer/pt_bank_bpd_diy_cover.jpg",
+      "link": "#"
+    },
+    {
+      "id": "logo-12",
+      "name": "Shopee",
+      "logo": "/assets/logo-trainer/shopee.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-13",
+      "name": "Telkom Indonesia logo",
+      "logo": "/assets/logo-trainer/Telkom_Indonesia_logo.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-14",
+      "name": "Temandata logo",
+      "logo": "/assets/logo-trainer/temandata_logo.jpg",
+      "link": "#"
+    },
+    {
+      "id": "logo-15",
+      "name": "Tiket.com logo",
+      "logo": "/assets/logo-trainer/Tiket.com_logo.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-16",
+      "name": "Tokopedia",
+      "logo": "/assets/logo-trainer/tokopedia.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-17",
+      "name": "Traveloka",
+      "logo": "/assets/logo-trainer/traveloka.png",
+      "link": "#"
+    },
+    {
+      "id": "logo-18",
+      "name": "Universitas Teknologi Bandung Logo",
+      "logo": "/assets/logo-trainer/Universitas_Teknologi_Bandung_Logo.png",
+      "link": "#"
+    }
+  ],
+  "lastUpdated": "2025-12-26T11:22:19.716Z",
+  "totalLogos": 18,
+  "note": "This file is auto-generated from public/assets/logo-trainer folder. Edit company names and links manually if needed."
+}

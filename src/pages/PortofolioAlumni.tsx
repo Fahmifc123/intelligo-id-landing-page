@@ -1,12 +1,38 @@
-import { Helmet } from "react-helmet-async";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { FileText, Code, BarChart3, Brain, Eye, Database, TrendingUp, Users, Layers, Search, Filter, Download } from "lucide-react";
-import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import portfolioData from "@/data/alumni-portfolio.json";
+import { BarChart3, Brain, Code, Database, Download, Eye, FileText, Filter, Layers, Search, TrendingUp, Users } from "lucide-react";
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
+interface PortfolioItem {
+  title: string;
+  author: string;
+  batch: string;
+  tags: string[];
+  category: string;
+  description: string;
+  pdfUrl: string;
+  photo: string;
+}
+
+const iconMap: { [key: string]: React.ElementType } = {
+  "E-Commerce": BarChart3,
+  "Human Resources": Brain,
+  "Education": FileText,
+  "Marketing": Code,
+  "NLP": Brain,
+  "Finance": TrendingUp,
+  "Entertainment": Layers,
+  "Manufacturing": Database,
+  "Telecom": Users,
+  "Healthcare": Brain,
+  "Logistics": BarChart3,
+};
 
 const PortofolioAlumni = () => {
   const [selectedPdf, setSelectedPdf] = useState<{ title: string; url: string } | null>(null);
@@ -14,131 +40,13 @@ const PortofolioAlumni = () => {
   const [selectedBatch, setSelectedBatch] = useState("all");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const portfolios = [
-    {
-      title: "E-tail Explorer: Navigating E-commerce Customer Interactions",
-      author: "Muhammad Vito Aristawidya",
-      batch: "Batch 5",
-      tags: ["Data Science", "Python", "Analytics", "Business"],
-      category: "E-Commerce",
-      description: "Analisis mendalam tentang interaksi pelanggan e-commerce untuk meningkatkan pengalaman pengguna dan konversi. Project ini mengeksplorasi pola pembelian, customer journey, dan rekomendasi produk.",
-      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/03/Final-Project-Muhammad-Vito-Aristawidya.pptx",
-      icon: BarChart3
-    },
-    {
-      title: "Unlocking Employee Growth: ML Approach to Promotion",
-      author: "Fahmi Hamam",
-      batch: "Batch 6",
-      tags: ["Data Science", "Python", "Machine Learning", "HR Analytics"],
-      category: "Human Resources",
-      description: "Pendekatan machine learning untuk memprediksi dan mengoptimalkan promosi karyawan dalam perusahaan. Model ini membantu HR dalam pengambilan keputusan berbasis data.",
-      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/03/Fahmi-Hammam-final-project-PPT-Fahmi-hammam-t.pdf",
-      icon: Brain
-    },
-    {
-      title: "Integrated Insights: University Rankings and Student Performance Analysis (2018-2023)",
-      author: "Zaki Maulana Hidayat",
-      batch: "Batch 6",
-      tags: ["Data Science", "Python", "Analytics", "Education"],
-      category: "Education",
-      description: "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023. Menggunakan berbagai metrik untuk mengidentifikasi faktor-faktor keberhasilan akademik.",
-      pdfUrl: "http://www.intelligo.id/wp-content/uploads/2025/02/Intelligo-Final-Project-Zaki-Maulana-Hidayat.pdf",
-      icon: FileText
-    },
-    {
-      title: "Customer Segmentation using K-Means Clustering",
-      author: "Aryandhita Kinanti Putri",
-      batch: "Batch 7",
-      tags: ["Data Science", "Clustering", "Marketing", "Python"],
-      category: "Marketing",
-      description: "Implementasi K-Means clustering untuk segmentasi pelanggan dan strategi marketing yang lebih targeted. Menghasilkan 5 segmen pelanggan dengan karakteristik unik.",
-      pdfUrl: "",
-      icon: Code
-    },
-    {
-      title: "Sentiment Analysis on Social Media Reviews",
-      author: "Ahmad Rizki",
-      batch: "Batch 7",
-      tags: ["NLP", "Python", "Deep Learning", "Analytics"],
-      category: "NLP",
-      description: "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media. Menggunakan BERT untuk akurasi tinggi dalam klasifikasi sentimen.",
-      pdfUrl: "",
-      icon: Brain
-    },
-    {
-      title: "Sales Forecasting with Time Series Analysis",
-      author: "Dewi Sartika",
-      batch: "Batch 5",
-      tags: ["Time Series", "Forecasting", "Python", "Business"],
-      category: "Finance",
-      description: "Prediksi penjualan menggunakan analisis time series untuk perencanaan bisnis yang lebih akurat. Menggunakan ARIMA dan Prophet untuk prediksi 12 bulan ke depan.",
-      pdfUrl: "",
-      icon: TrendingUp
-    },
-    {
-      title: "Fraud Detection System using Random Forest",
-      author: "Budi Santoso",
-      batch: "Batch 5",
-      tags: ["Machine Learning", "Python", "Security", "Finance"],
-      category: "Finance",
-      description: "Sistem deteksi fraud menggunakan Random Forest dengan akurasi 98%. Implementasi real-time monitoring untuk transaksi mencurigakan.",
-      pdfUrl: "",
-      icon: Database
-    },
-    {
-      title: "Recommendation Engine for Streaming Platform",
-      author: "Lisa Permata",
-      batch: "Batch 6",
-      tags: ["Machine Learning", "Python", "Recommendation", "Entertainment"],
-      category: "Entertainment",
-      description: "Membangun recommendation engine untuk platform streaming menggunakan collaborative filtering dan content-based filtering.",
-      pdfUrl: "",
-      icon: Layers
-    },
-    {
-      title: "Predictive Maintenance for Manufacturing",
-      author: "Rudi Hartono",
-      batch: "Batch 7",
-      tags: ["IoT", "Machine Learning", "Python", "Manufacturing"],
-      category: "Manufacturing",
-      description: "Sistem predictive maintenance menggunakan sensor data dan machine learning untuk memprediksi kerusakan mesin sebelum terjadi.",
-      pdfUrl: "",
-      icon: Database
-    },
-    {
-      title: "Customer Churn Prediction Model",
-      author: "Siti Nurhaliza",
-      batch: "Batch 5",
-      tags: ["Machine Learning", "Python", "Analytics", "Telecom"],
-      category: "Telecom",
-      description: "Model prediksi churn pelanggan telekomunikasi dengan akurasi 92%. Membantu perusahaan mengidentifikasi pelanggan yang berisiko berpindah.",
-      pdfUrl: "",
-      icon: Users
-    },
-    {
-      title: "Image Classification for Medical Diagnosis",
-      author: "Dr. Andi Wijaya",
-      batch: "Batch 6",
-      tags: ["Deep Learning", "Computer Vision", "Python", "Healthcare"],
-      category: "Healthcare",
-      description: "Klasifikasi gambar X-ray menggunakan CNN untuk membantu diagnosis penyakit paru-paru dengan akurasi 95%.",
-      pdfUrl: "",
-      icon: Brain
-    },
-    {
-      title: "Supply Chain Optimization Dashboard",
-      author: "Maria Christina",
-      batch: "Batch 7",
-      tags: ["Data Visualization", "Python", "Logistics", "Dashboard"],
-      category: "Logistics",
-      description: "Dashboard interaktif untuk optimasi supply chain menggunakan Tableau dan Python. Mengurangi biaya logistik hingga 15%.",
-      pdfUrl: "",
-      icon: BarChart3
-    }
-  ];
+  const portfolios = portfolioData.map((portfolio: PortfolioItem) => ({
+    ...portfolio,
+    icon: iconMap[portfolio.category] || BarChart3,
+  }));
 
   const stats = [
-    { value: "100+", label: "Total Project" },
+    { value: portfolios.length.toString(), label: "Total Project" },
     { value: "50+", label: "Company Partner" },
     { value: "15+", label: "Industry Sector" },
     { value: "95%", label: "Project Success Rate" }
@@ -303,9 +211,16 @@ const PortofolioAlumni = () => {
                         </p>
 
                         <div className="flex items-center justify-between pt-4 border-t border-border/50">
-                          <div>
-                            <p className="text-foreground font-medium text-sm">{portfolio.author}</p>
-                            <p className="text-foreground/50 text-xs">{portfolio.batch}</p>
+                          <div className="flex items-center gap-3 flex-1">
+                            <img
+                              src={portfolio.photo}
+                              alt={portfolio.author}
+                              className="w-10 h-10 rounded-full object-cover"
+                            />
+                            <div>
+                              <p className="text-foreground font-medium text-sm">{portfolio.author}</p>
+                              <p className="text-foreground/50 text-xs">{portfolio.batch}</p>
+                            </div>
                           </div>
                           
                           {portfolio.pdfUrl ? (

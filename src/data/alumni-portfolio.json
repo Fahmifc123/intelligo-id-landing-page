@@ -1,0 +1,122 @@
+[
+  {
+    "title": "E-tail Explorer: Navigating E-commerce Customer Interactions",
+    "author": "Muhammad Vito Aristawidya",
+    "batch": "Batch 5",
+    "tags": ["Data Science", "Python", "Analytics", "Business"],
+    "category": "E-Commerce",
+    "description": "Analisis mendalam tentang interaksi pelanggan e-commerce untuk meningkatkan pengalaman pengguna dan konversi. Project ini mengeksplorasi pola pembelian, customer journey, dan rekomendasi produk.",
+    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/03/Final-Project-Muhammad-Vito-Aristawidya.pptx",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Unlocking Employee Growth: ML Approach to Promotion",
+    "author": "Fahmi Hamam",
+    "batch": "Batch 6",
+    "tags": ["Data Science", "Python", "Machine Learning", "HR Analytics"],
+    "category": "Human Resources",
+    "description": "Pendekatan machine learning untuk memprediksi dan mengoptimalkan promosi karyawan dalam perusahaan. Model ini membantu HR dalam pengambilan keputusan berbasis data.",
+    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/03/Fahmi-Hammam-final-project-PPT-Fahmi-hammam-t.pdf",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Integrated Insights: University Rankings and Student Performance Analysis (2018-2023)",
+    "author": "Zaki Maulana Hidayat",
+    "batch": "Batch 6",
+    "tags": ["Data Science", "Python", "Analytics", "Education"],
+    "category": "Education",
+    "description": "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023. Menggunakan berbagai metrik untuk mengidentifikasi faktor-faktor keberhasilan akademik.",
+    "pdfUrl": "http://www.intelligo.id/wp-content/uploads/2025/02/Intelligo-Final-Project-Zaki-Maulana-Hidayat.pdf",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Customer Segmentation using K-Means Clustering",
+    "author": "Aryandhita Kinanti Putri",
+    "batch": "Batch 7",
+    "tags": ["Data Science", "Clustering", "Marketing", "Python"],
+    "category": "Marketing",
+    "description": "Implementasi K-Means clustering untuk segmentasi pelanggan dan strategi marketing yang lebih targeted. Menghasilkan 5 segmen pelanggan dengan karakteristik unik.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Sentiment Analysis on Social Media Reviews",
+    "author": "Ahmad Rizki",
+    "batch": "Batch 7",
+    "tags": ["NLP", "Python", "Deep Learning", "Analytics"],
+    "category": "NLP",
+    "description": "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media. Menggunakan BERT untuk akurasi tinggi dalam klasifikasi sentimen.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Sales Forecasting with Time Series Analysis",
+    "author": "Dewi Sartika",
+    "batch": "Batch 5",
+    "tags": ["Time Series", "Forecasting", "Python", "Business"],
+    "category": "Finance",
+    "description": "Prediksi penjualan menggunakan analisis time series untuk perencanaan bisnis yang lebih akurat. Menggunakan ARIMA dan Prophet untuk prediksi 12 bulan ke depan.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Fraud Detection System using Random Forest",
+    "author": "Budi Santoso",
+    "batch": "Batch 5",
+    "tags": ["Machine Learning", "Python", "Security", "Finance"],
+    "category": "Finance",
+    "description": "Sistem deteksi fraud menggunakan Random Forest dengan akurasi 98%. Implementasi real-time monitoring untuk transaksi mencurigakan.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Recommendation Engine for Streaming Platform",
+    "author": "Lisa Permata",
+    "batch": "Batch 6",
+    "tags": ["Machine Learning", "Python", "Recommendation", "Entertainment"],
+    "category": "Entertainment",
+    "description": "Membangun recommendation engine untuk platform streaming menggunakan collaborative filtering dan content-based filtering.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Predictive Maintenance for Manufacturing",
+    "author": "Rudi Hartono",
+    "batch": "Batch 7",
+    "tags": ["IoT", "Machine Learning", "Python", "Manufacturing"],
+    "category": "Manufacturing",
+    "description": "Sistem predictive maintenance menggunakan sensor data dan machine learning untuk memprediksi kerusakan mesin sebelum terjadi.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Customer Churn Prediction Model",
+    "author": "Siti Nurhaliza",
+    "batch": "Batch 5",
+    "tags": ["Machine Learning", "Python", "Analytics", "Telecom"],
+    "category": "Telecom",
+    "description": "Model prediksi churn pelanggan telekomunikasi dengan akurasi 92%. Membantu perusahaan mengidentifikasi pelanggan yang berisiko berpindah.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Image Classification for Medical Diagnosis",
+    "author": "Dr. Andi Wijaya",
+    "batch": "Batch 6",
+    "tags": ["Deep Learning", "Computer Vision", "Python", "Healthcare"],
+    "category": "Healthcare",
+    "description": "Klasifikasi gambar X-ray menggunakan CNN untuk membantu diagnosis penyakit paru-paru dengan akurasi 95%.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face"
+  },
+  {
+    "title": "Supply Chain Optimization Dashboard",
+    "author": "Maria Christina",
+    "batch": "Batch 7",
+    "tags": ["Data Visualization", "Python", "Logistics", "Dashboard"],
+    "category": "Logistics",
+    "description": "Dashboard interaktif untuk optimasi supply chain menggunakan Tableau dan Python. Mengurangi biaya logistik hingga 15%.",
+    "pdfUrl": "",
+    "photo": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face"
+  }
+]

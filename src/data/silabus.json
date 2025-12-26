@@ -1,0 +1,199 @@
+{
+  "curriculums": [
+    {
+      "id": "data-science-beginner",
+      "title": "Data Science For Beginner",
+      "icon": "BookOpen",
+      "description": "Pelajari fondasi Data Science dari awal. Cocok untuk pemula yang ingin memulai karir di bidang data science dengan memahami konsep dasar hingga implementasi praktis.",
+      "topics": [
+        "Python Basics",
+        "Data Cleaning",
+        "Exploratory Data Analysis",
+        "Basic Statistics",
+        "Data Visualization"
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Pengenalan Python & Environment Setup",
+          "topics": [
+            "Installasi Python & Tools",
+            "Jupyter Notebook Setup",
+            "Basic Python Syntax",
+            "Variables & Data Types"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Data Structures & Libraries",
+          "topics": [
+            "List, Tuple, Dictionary",
+            "Introduction to NumPy",
+            "Introduction to Pandas",
+            "Data Loading & Inspection"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Data Cleaning & Preparation",
+          "topics": [
+            "Handling Missing Values",
+            "Data Type Conversion",
+            "Removing Duplicates",
+            "Feature Scaling"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Exploratory Data Analysis",
+          "topics": [
+            "Descriptive Statistics",
+            "Data Visualization with Matplotlib",
+            "Seaborn for Statistical Graphics",
+            "Correlation Analysis"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Basic Statistics & Probability",
+          "topics": [
+            "Distribution Analysis",
+            "Hypothesis Testing",
+            "Confidence Intervals",
+            "P-values & Significance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-beginner",
+      "title": "AI For Beginner",
+      "icon": "Brain",
+      "description": "Masuki dunia Artificial Intelligence dengan materi yang mudah dipahami. Pelajari konsep AI, machine learning, dan deep learning dari yang paling dasar.",
+      "topics": [
+        "Machine Learning Basics",
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Neural Networks",
+        "AI Ethics"
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Introduction to Machine Learning",
+          "topics": [
+            "What is Machine Learning",
+            "Types of ML (Supervised, Unsupervised, Reinforcement)",
+            "ML Workflow",
+            "Feature Engineering Basics"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Supervised Learning - Regression",
+          "topics": [
+            "Linear Regression",
+            "Multiple Regression",
+            "Polynomial Regression",
+            "Model Evaluation Metrics"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Supervised Learning - Classification",
+          "topics": [
+            "Logistic Regression",
+            "Decision Trees",
+            "Random Forest",
+            "SVM Basics"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Unsupervised Learning",
+          "topics": [
+            "K-Means Clustering",
+            "Hierarchical Clustering",
+            "Dimensionality Reduction (PCA)",
+            "Anomaly Detection"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Introduction to Deep Learning",
+          "topics": [
+            "Neural Networks Fundamentals",
+            "Activation Functions",
+            "Backpropagation",
+            "TensorFlow & Keras Basics"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "job-ready",
+      "title": "Job Ready",
+      "icon": "Zap",
+      "description": "Program persiapan khusus untuk memasuki industri kerja. Fokus pada praktik industri, portfolio building, interview preparation, dan soft skills yang dibutuhkan perusahaan.",
+      "topics": [
+        "Industry Best Practices",
+        "Portfolio Building",
+        "Interview Preparation",
+        "Resume Optimization",
+        "Networking Skills"
+      ],
+      "modules": [
+        {
+          "week": 1,
+          "title": "Data Science in Production",
+          "topics": [
+            "ML Pipeline Development",
+            "Model Deployment",
+            "API Development",
+            "Docker & Containerization"
+          ]
+        },
+        {
+          "week": 2,
+          "title": "Advanced Feature Engineering",
+          "topics": [
+            "Feature Selection",
+            "Cross-validation",
+            "Hyperparameter Tuning",
+            "Ensemble Methods"
+          ]
+        },
+        {
+          "week": 3,
+          "title": "Real-World Projects",
+          "topics": [
+            "End-to-End Project 1",
+            "End-to-End Project 2",
+            "Big Data Handling",
+            "Performance Optimization"
+          ]
+        },
+        {
+          "week": 4,
+          "title": "Portfolio & GitHub",
+          "topics": [
+            "Building GitHub Portfolio",
+            "Project Documentation",
+            "Kaggle Competition Participation",
+            "Blogging & Knowledge Sharing"
+          ]
+        },
+        {
+          "week": 5,
+          "title": "Interview Preparation",
+          "topics": [
+            "Technical Interview Q&A",
+            "Behavioral Interviews",
+            "Case Studies",
+            "Negotiation Skills"
+          ]
+        }
+      ]
+    }
+  ]
+}

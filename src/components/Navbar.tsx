@@ -17,6 +17,7 @@ const Navbar = () => {
       id: "bootcamp-online",
       title: "Bootcamp Online",
       description: "Belajar dari rumah dengan live class interaktif",
+      categoryHref: "/bootcamp-online",
       items: [
         { title: "Bootcamp Malam (Weekday)", href: "/program/bootcamp-malam" },
         { title: "Weekend Bootcamp Online", href: "/program/bootcamp-weekend" },
@@ -27,6 +28,7 @@ const Navbar = () => {
       id: "bootcamp-offline",
       title: "Bootcamp Offline",
       description: "Tatap muka intensif dengan praktik langsung di Jakarta & Bandung",
+      categoryHref: "/bootcamp-offline",
       items: [
         { title: "Weekend Bootcamp Offline", href: "/program/bootcamp-offline" },
         { title: "Weekday Bootcamp Offline", href: "/program/bootcamp-weekday" },
@@ -36,6 +38,7 @@ const Navbar = () => {
       id: "private",
       title: "Private Course",
       description: "1-on-1 mentoring dengan jadwal fleksibel (Online & Offline)",
+      categoryHref: "/private-course",
       items: [
         { title: "Private Course Online", href: "/program/private-course" },
         { title: "Private Course Offline", href: "/program/private-course-offline" },
@@ -45,6 +48,7 @@ const Navbar = () => {
       id: "mini",
       title: "Mini Bootcamp & Workshop",
       description: "Program singkat untuk fondasi cepat dalam Data Science & AI",
+      categoryHref: "/mini-bootcamp-workshop",
       items: [
         { title: "Mini Bootcamp DS & AI", href: "/program/mini-bootcamp" },
         { title: "Workshop Intensive", href: "/program/workshop" },
@@ -54,6 +58,7 @@ const Navbar = () => {
       id: "corporate",
       title: "Corporate Training",
       description: "Pelatihan khusus untuk perusahaan dengan kurikulum custom",
+      categoryHref: "/corporate-training",
       items: [
         { title: "Corporate Training", href: "/program/corporate-training" },
       ]
@@ -64,13 +69,13 @@ const Navbar = () => {
     { 
       title: "About Us", 
       description: "Informasi tentang visi dan misi Intelligo.", 
-      href: "/about",
+      href: "/about-us",
       icon: Users 
     },
     { 
       title: "Portofolio Student", 
       description: "Portofolio karya alumni kami.", 
-      href: "/portofolio",
+      href: "/portofolio-student",
       icon: FolderOpen 
     },
     { 
@@ -181,7 +186,13 @@ const Navbar = () => {
                     <div className="flex-1 p-5">
                       {activeCategory && (
                         <>
-                          <h3 className="font-bold text-foreground mb-1">{activeCategory.title}</h3>
+                          <Link
+                            to={activeCategory.categoryHref}
+                            onClick={() => setActiveDropdown(null)}
+                            className="font-bold text-foreground hover:text-accent transition-colors mb-1 block"
+                          >
+                            {activeCategory.title}
+                          </Link>
                           <p className="text-sm text-foreground/60 mb-4">{activeCategory.description}</p>
                           <div className="space-y-1">
                             {activeCategory.items.map((item) => (
@@ -326,6 +337,11 @@ const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-3">
+            <Button className="bg-slate-900 hover:bg-slate-800 text-white" size="sm" asChild>
+              <Link to="/katalog-bootcamp">
+                Katalog Bootcamp
+              </Link>
+            </Button>
             <Button variant="accent" size="sm" asChild>
               <a href="https://intelligo.myr.id/" target="_blank" rel="noopener noreferrer">
                 Learning Portal

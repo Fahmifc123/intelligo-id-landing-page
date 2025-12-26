@@ -3,9 +3,11 @@
  * Minimalist horizontal scrolling carousel with title and logos only
  */
 
-import alumniLogosData from '@/assets/logos/alumni-logos';
+import alumniLogosData from '@/data/alumni-logos.json';
 
 export const AlumniLogosShowcase = () => {
+  const logos = alumniLogosData.alumniLogos;
+  
   return (
     <div className="w-full bg-white py-2 md:py-3">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
@@ -31,13 +33,13 @@ export const AlumniLogosShowcase = () => {
           
           <div className="flex gap-4 md:gap-8 carousel-container">
             {/* First set */}
-            {alumniLogosData.map((logo, idx) => (
+            {logos.map((logo, idx) => (
               <div
                 key={`carousel-1-${idx}`}
                 className="flex-shrink-0 flex items-center justify-center min-w-max"
               >
                 <img
-                  src={logo.src}
+                  src={logo.logo}
                   alt={logo.name}
                   className="h-8 md:h-10 object-contain"
                   onError={(e) => {
@@ -48,13 +50,13 @@ export const AlumniLogosShowcase = () => {
             ))}
             
             {/* Duplicate set for seamless loop */}
-            {alumniLogosData.map((logo, idx) => (
+            {logos.map((logo, idx) => (
               <div
                 key={`carousel-2-${idx}`}
                 className="flex-shrink-0 flex items-center justify-center min-w-max"
               >
                 <img
-                  src={logo.src}
+                  src={logo.logo}
                   alt={logo.name}
                   className="h-8 md:h-10 object-contain"
                   onError={(e) => {

@@ -1,18 +1,18 @@
-import { useState, useEffect } from "react";
-import { 
-  Home, 
-  GraduationCap, 
-  BookOpen, 
-  MessageSquare, 
-  BarChart3, 
-  Users, 
-  CreditCard, 
-  Gift, 
-  HelpCircle,
-  ChevronLeft,
-  ChevronRight,
-  Briefcase
+import {
+    BarChart3,
+    BookOpen,
+    Briefcase,
+    ChevronLeft,
+    ChevronRight,
+    CreditCard,
+    Gift,
+    GraduationCap,
+    HelpCircle,
+    Home,
+    MessageSquare,
+    Users
 } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const SidebarNav = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -25,7 +25,7 @@ const SidebarNav = () => {
     { id: "career", label: "Karier", icon: Briefcase },
     { id: "testimoni", label: "Testimoni", icon: MessageSquare },
     { id: "stats", label: "Pencapaian", icon: BarChart3 },
-    { id: "mentor", label: "Mentor", icon: Users },
+    { id: "trainer", label: "Trainer", icon: Users },
     { id: "pricing", label: "Harga", icon: CreditCard },
     { id: "promo", label: "Promo", icon: Gift },
     { id: "faq", label: "FAQ", icon: HelpCircle },
