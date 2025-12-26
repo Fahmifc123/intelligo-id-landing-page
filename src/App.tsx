@@ -49,11 +49,7 @@ const App = () => (
         <WhatsAppButton />
         <BrowserRouter>          <ScrollToTop />          <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/bootcamp-online" element={<BootcampOnline />} />
-            {/* SEO: Old slug redirect */}
             <Route path="/bootcamp-data-science-online" element={<BootcampOnline />} />
-            <Route path="/bootcamp-offline" element={<BootcampOfflineCategory />} />
-            {/* SEO: Old slug redirect */}
             <Route path="/bootcamp-data-science-offline" element={<BootcampOfflineCategory />} />
             <Route path="/private-course" element={<PrivateCourseCategory />} />
             <Route path="/mini-bootcamp-workshop" element={<MiniBootcampWorkshopCategory />} />
