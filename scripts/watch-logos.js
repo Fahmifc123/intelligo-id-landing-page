@@ -6,7 +6,7 @@
  * Script ini akan:
  * 1. Monitor folder public/assets/logo-alumni untuk perubahan file
  * 2. Monitor folder public/assets/logo-trainer untuk perubahan file
- * 3. Otomatis run generate-logos-json.js setiap ada file baru/dihapus/diubah
+ * 3. Otomatis run generate-logos-json.cjs setiap ada file baru/dihapus/diubah
  * 
  * Usage:
  *   npm run watch-logos
@@ -18,7 +18,7 @@ const { spawn } = require('child_process');
 
 const alumniFolder = path.join(__dirname, '../public/assets/logo-alumni');
 const trainerFolder = path.join(__dirname, '../public/assets/logo-trainer');
-const generateScript = path.join(__dirname, 'generate-logos-json.js');
+const generateScript = path.join(__dirname, 'generate-logos-json.cjs');
 
 // Color codes untuk console output
 const colors = {
@@ -34,7 +34,7 @@ function log(color, message) {
 }
 
 function runGenerateScript() {
-  log(colors.blue, '\n📝 Running generate-logos-json.js...');
+  log(colors.blue, '\n📝 Running generate-logos-json.cjs...');
   
   const child = spawn('node', [generateScript], {
     stdio: 'inherit',
