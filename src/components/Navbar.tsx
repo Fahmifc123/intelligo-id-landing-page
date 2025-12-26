@@ -84,6 +84,13 @@ const Navbar = () => {
       href: "/kontak",
       icon: FileText 
     },
+    { 
+      title: "Join Community", 
+      description: "Bergabung dengan komunitas Intelligo.", 
+      href: "https://community.intelligo.id/",
+      icon: Users,
+      target: "_blank"
+    },
   ];
 
   useEffect(() => {
@@ -310,24 +317,46 @@ const Navbar = () => {
 
                     {/* Right side - Menu Items */}
                     <div className="flex-1 space-y-1">
-                      {whyIntelligoItems.map((item) => (
-                        <Link
-                          key={item.title}
-                          to={item.href}
-                          onClick={() => setActiveDropdown(null)}
-                          className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors group"
-                        >
-                          <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
-                            <item.icon className="w-5 h-5 text-accent" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
-                              {item.title}
-                            </h4>
-                            <p className="text-sm text-foreground/60">{item.description}</p>
-                          </div>
-                        </Link>
-                      ))}
+                      {whyIntelligoItems.map((item) => {
+                        const isExternal = item.href.startsWith('http');
+                        return isExternal ? (
+                          <a
+                            key={item.title}
+                            href={item.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors group"
+                          >
+                            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                              <item.icon className="w-5 h-5 text-accent" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-foreground/60">{item.description}</p>
+                            </div>
+                          </a>
+                        ) : (
+                          <Link
+                            key={item.title}
+                            to={item.href}
+                            onClick={() => setActiveDropdown(null)}
+                            className="flex items-start gap-3 p-3 rounded-lg hover:bg-accent/5 transition-colors group"
+                          >
+                            <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0 group-hover:bg-accent/20 transition-colors">
+                              <item.icon className="w-5 h-5 text-accent" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-foreground group-hover:text-accent transition-colors">
+                                {item.title}
+                              </h4>
+                              <p className="text-sm text-foreground/60">{item.description}</p>
+                            </div>
+                          </Link>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -398,16 +427,30 @@ const Navbar = () => {
               {/* Mobile Why Intelligo Section */}
               <div className="px-4 py-2">
                 <p className="text-xs font-semibold text-foreground/50 uppercase tracking-wider mb-2">Why Intelligo</p>
-                {whyIntelligoItems.map((item) => (
-                  <Link
-                    key={item.title}
-                    to={item.href}
-                    className="block py-2 text-foreground/70 hover:text-accent transition-colors"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.title}
-                  </Link>
-                ))}
+                {whyIntelligoItems.map((item) => {
+                  const isExternal = item.href.startsWith('http');
+                  return isExternal ? (
+                    <a
+                      key={item.title}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block py-2 text-foreground/70 hover:text-accent transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                    </a>
+                  ) : (
+                    <Link
+                      key={item.title}
+                      to={item.href}
+                      className="block py-2 text-foreground/70 hover:text-accent transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="px-4 mt-4">
