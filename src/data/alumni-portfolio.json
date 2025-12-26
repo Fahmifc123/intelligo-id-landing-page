@@ -7,7 +7,7 @@
     "category": "E-Commerce",
     "description": "Tim Intelligo ID sedang melakukan penelitian terhadap Interaksi customer di E-Commerce secara online. Strategi untuk meningkatkan kepuasan pelanggan dan retensi pelanggan.",
     "pdfUrl": "https://drive.google.com/open?id=18LVT9YOOjntkDqFAaE15KisxeYPijmHc",
-    "photo": "https://drive.google.com/uc?id=1Q3K4AbOUk2JUFZfDK4A50roatDUEU0ab&export=download"
+    "photo": "https://drive.google.com/uc?id=1Q3K4AbOUk2JUFZfDK4A50roatDUEU0ab"
   },
   {
     "title": "Unlocking Employee Growth: ML Approach to Promotion",
@@ -17,7 +17,7 @@
     "category": "Human Resources",
     "description": "Melakukan promosi kepada karyawan dengan menggunakan pendekatan machine learning untuk mencari karyawan yang layak di promosi berdasarkan data mereka.",
     "pdfUrl": "https://drive.google.com/open?id=1d0EB_5K00fwFTUCVyC4XOlKqBJaRrm6t",
-    "photo": "https://drive.google.com/uc?id=1Fv---Ffmfh3UuuQPRiAXXHMH1tWPgwRD&export=download"
+    "photo": "https://drive.google.com/uc?id=1Fv---Ffmfh3UuuQPRiAXXHMH1tWPgwRD"
   },
   {
     "title": "Integrated Insights: University Rankings and Student Performance Analysis (2018-2023)",
@@ -27,7 +27,7 @@
     "category": "Education",
     "description": "Analisis komprehensif tentang ranking universitas dan performa mahasiswa selama periode 2018-2023 menggunakan metode prediksi linear regresi.",
     "pdfUrl": "https://drive.google.com/open?id=1OAolCLzxbPRWEiUpXcjTb-dr6wF9O3IC",
-    "photo": "https://drive.google.com/uc?id=1Hf2QJfXthhn4RbDWDMssNnYAwWq65pw-&export=download"
+    "photo": "https://drive.google.com/uc?id=1Hf2QJfXthhn4RbDWDMssNnYAwWq65pw-"
   },
   {
     "title": "Navigating E-commerce Customer Interaction",
@@ -37,7 +37,7 @@
     "category": "E-Commerce",
     "description": "Analisis interaksi pembeli di dalam marketplace untuk memahami tingkat kepuasan pelanggan dalam membeli barang elektronik.",
     "pdfUrl": "https://drive.google.com/open?id=1OVSi0SxjUNZ-AGo0pOLMQOjKF9keU-b2",
-    "photo": "https://drive.google.com/uc?id=1_6YlHmLaduHNzweRP8yxpBVf83IT6Ioa&export=download"
+    "photo": "https://drive.google.com/uc?id=1_6YlHmLaduHNzweRP8yxpBVf83IT6Ioa"
   },
   {
     "title": "Optimalisasi Klasifikasi Kepuasan Pelanggan Berbasis SVM",
@@ -47,7 +47,7 @@
     "category": "E-Commerce",
     "description": "Menganalisis faktor-faktor yang mempengaruhi kepuasan pelanggan dalam e-commerce menggunakan metode SVM untuk klasifikasi tingkat kepuasan pelanggan.",
     "pdfUrl": "https://drive.google.com/open?id=1qUv9uO3pxLYEUgxfj8QTrVAOo0uVwNTY",
-    "photo": "https://drive.google.com/uc?id=1QUf2_nKVhUzzuIo7i_QR49VlM0jpff4G&export=download"
+    "photo": "https://drive.google.com/uc?id=1QUf2_nKVhUzzuIo7i_QR49VlM0jpff4G"
   },
   {
     "title": "Analisis Customer untuk Segmentasi Pelanggan",
@@ -57,7 +57,7 @@
     "category": "Marketing",
     "description": "Menganalisis data pada latar belakang customer untuk mendapatkan insight yang bermanfaat untuk keputusan segmentasi pelanggan menggunakan clustering.",
     "pdfUrl": "https://drive.google.com/open?id=1Oso25WIPKVUGtgM9MWy2r87UgS-LM3kX",
-    "photo": "https://drive.google.com/uc?id=1pHuMpU-2_RwJaP9PKQFLBeMZv3rW6bxq&export=download"
+    "photo": "https://drive.google.com/uc?id=1pHuMpU-2_RwJaP9PKQFLBeMZv3rW6bxq"
   },
   {
     "title": "Analisis dan Prediksi Pola Karyawan Pulang Lebih Awal Menggunakan Model ARIMA",
@@ -67,7 +67,7 @@
     "category": "Human Resources",
     "description": "Memprediksi pola karyawan yang pulang lebih awal dengan ARIMA untuk perencanaan tenaga kerja dan kebijakan kehadiran.",
     "pdfUrl": "https://drive.google.com/open?id=1qd_ckqskuBZGyU7NZY5A5Y4veddudx2p",
-    "photo": "https://drive.google.com/uc?id=1LPyO9gxND73b2tD0NxRFrkGbshByJOrd&export=download"
+    "photo": "https://drive.google.com/uc?id=1LPyO9gxND73b2tD0NxRFrkGbshByJOrd"
   },
   {
     "title": "Unlocking Employee Growth: ML Approach to Promotions",
@@ -77,36 +77,197 @@
     "category": "Human Resources",
     "description": "Proyek menggunakan Machine Learning untuk menganalisis dan memprediksi promosi karyawan dengan akurasi 93,40% menggunakan Gradient Boosting Classifier.",
     "pdfUrl": "https://drive.google.com/open?id=1hRvFehQI6YUW5h8kOH4qxYO12ekKUHtS",
-    "photo": "https://drive.google.com/uc?id=1hRvFehQI6YUW5h8kOH4qxYO12ekKUHtS&export=download"
+    "photo": "https://drive.google.com/uc?id=1hRvFehQI6YUW5h8kOH4qxYO12ekKUHtS"
   },
   {
-    "title": "Customer Churn Prediction Model",
-    "author": "Siti Nurhaliza",
-    "batch": "Batch 5",
-    "tags": ["Machine Learning", "Prediction", "Telecom", "Analytics"],
-    "category": "Telecom",
-    "description": "Model prediksi churn pelanggan telekomunikasi dengan akurasi 92% untuk membantu perusahaan mengidentifikasi pelanggan yang berisiko berpindah.",
+    "title": "Ardiana Abdul Gumelar - Portfolio",
+    "author": "Ardiana Abdul Gumelar",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
     "pdfUrl": "",
-    "photo": "/assets/foto-alumni/siti-nurhaliza.jpg"
+    "photo": "https://drive.google.com/uc?id=1_Lbx6P7Zug9BfGw8alUZtp2UjorM1y_V"
   },
   {
-    "title": "Supply Chain Optimization Dashboard",
-    "author": "Maria Christina",
-    "batch": "Batch 7",
-    "tags": ["Data Visualization", "Dashboard", "Logistics", "Python"],
-    "category": "Logistics",
-    "description": "Dashboard interaktif untuk optimasi supply chain menggunakan Tableau dan Python, mengurangi biaya logistik hingga 15%.",
+    "title": "Tyas Ayu Kartikadewi - Portfolio",
+    "author": "Tyas Ayu Kartikadewi",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
     "pdfUrl": "",
-    "photo": "/assets/foto-alumni/maria-christina.jpg"
+    "photo": "https://drive.google.com/uc?id=1IAYp-iy1MseaPajOrNQI0_NRhFMCaHna"
   },
   {
-    "title": "Sentiment Analysis on Social Media Reviews",
-    "author": "Ahmad Rizki",
-    "batch": "Batch 7",
-    "tags": ["NLP", "Deep Learning", "Analytics", "Python"],
-    "category": "NLP",
-    "description": "Analisis sentimen menggunakan NLP untuk memahami feedback pelanggan dari review sosial media menggunakan BERT.",
+    "title": "Dimas Muhammad Akbar - Portfolio",
+    "author": "Dimas Muhammad Akbar",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
     "pdfUrl": "",
-    "photo": "/assets/foto-alumni/ahmad-rizki.jpg"
+    "photo": "https://drive.google.com/uc?id=1jNUvcuFQ4C2hnvwC58rBZau3vT0baaKG"
+  },
+  {
+    "title": "Raihan Fatahillah - Portfolio",
+    "author": "Raihan Fatahillah",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1hVHEaHxVVOYolTpn7VUefJnyHNbpLvKQ"
+  },
+  {
+    "title": "Akmal Falah Darmawan - Portfolio",
+    "author": "Akmal Falah Darmawan",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1K0dnH3Zq6b8udvyKIwgkWLW8KZwCzo38"
+  },
+  {
+    "title": "Yohanes Lengkong - Portfolio",
+    "author": "Yohanes Lengkong",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1BnadmnolofDqy7v8yIsmXrii3jLmJtd-"
+  },
+  {
+    "title": "Hansen Christian Suwito - Portfolio",
+    "author": "Hansen Christian Suwito",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=19ejj71pUY0tZUQSpooytgqkGghF5ttgQ"
+  },
+  {
+    "title": "Naufal Daffa Zayyan - Portfolio",
+    "author": "Naufal Daffa Zayyan",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1kvU9lX6VEG9tqTlQmQSQrR84wJltV1dF"
+  },
+  {
+    "title": "Randra Ferdian Saputra - Portfolio",
+    "author": "Randra Ferdian Saputra",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1tCmoT3lU8wQP12dRqLKQ1z1def6iYaxj"
+  },
+  {
+    "title": "Mahanani Hadi Wibowo - Portfolio",
+    "author": "Mahanani Hadi Wibowo",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1dGsT6l08DkCtn5ZVClAkrLKd03OlC6JD"
+  },
+  {
+    "title": "Elsa Sofiari - Portfolio",
+    "author": "Elsa Sofiari",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=18t8GY0vyd3ECpKkgk1m0s_XyF64cMqUz"
+  },
+  {
+    "title": "Mitchell Karindo - Portfolio",
+    "author": "Mitchell Karindo",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1sOt2ayDtXB55Bhw6wV6nVMvh2V2EyXFa"
+  },
+  {
+    "title": "Genoveva Yashinta Desideria - Portfolio",
+    "author": "Genoveva Yashinta Desideria",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=10Ziw_cStshaX-4_xAfvCkl5i_-k9zsIz"
+  },
+  {
+    "title": "L.M. Aznur Syahfajar - Portfolio",
+    "author": "L.M. Aznur Syahfajar",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1in3l3vfewjTPFjlnDjuPtkuROfcAiVIn"
+  },
+  {
+    "title": "Najmi Zulfan - Portfolio",
+    "author": "Najmi Zulfan",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1-Sap6t_4FBVQnEfQkJytzBjmRjm4oI6L"
+  },
+  {
+    "title": "Deryalfi Fathudin - Portfolio",
+    "author": "Deryalfi Fathudin",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1ZGDmrHn3kxki18IORSRHsXFqIledTJHM"
+  },
+  {
+    "title": "Vivi Putri Yanti Simanjuntak - Portfolio",
+    "author": "Vivi Putri Yanti Simanjuntak",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1J3lemVKDHoTmP293ee9nsUntssrGv1KK"
+  },
+  {
+    "title": "Delfiero Akbar Iskandar - Portfolio",
+    "author": "Delfiero Akbar Iskandar",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1hGNKJhXGOoIuQEigzxmeKCtZU-RC3LI5"
+  },
+  {
+    "title": "Bennedict Marvello Sheen - Portfolio",
+    "author": "Bennedict Marvello Sheen",
+    "batch": "Alumni",
+    "tags": ["Data Science"],
+    "category": "E-Commerce",
+    "description": "Portfolio alumni Intelligo",
+    "pdfUrl": "",
+    "photo": "https://drive.google.com/uc?id=1LoDjjKx68KSpbk9ghLwP3SUTjxX0VMgP"
   }
+
 ]
