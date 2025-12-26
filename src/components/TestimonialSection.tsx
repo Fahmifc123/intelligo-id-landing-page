@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import testimonialsData from "@/data/testimonials.json";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, ExternalLink, FileText, Quote } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
@@ -14,6 +15,7 @@ interface Portfolio {
 }
 
 interface Testimonial {
+  id: string;
   name: string;
   role: string;
   batch: string;
@@ -22,121 +24,18 @@ interface Testimonial {
   portfolio: Portfolio;
 }
 
-const testimonials: Testimonial[] = [
-  {
-    name: "Rizky Pratama",
-    role: "Data Analyst di Tokopedia",
-    batch: "Batch 12 - Bootcamp Data Science",
-    content:
-      "Keren sangat! Materinya sangat terstruktur dan mentor-mentornya berpengalaman. Dalam 3 bulan setelah lulus, saya langsung dapat kerja!",
-    photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
-    portfolio: {
-      title: "E-Commerce Sales Dashboard",
-      description:
-        "Dashboard interaktif untuk analisis penjualan e-commerce menggunakan Python, Pandas, dan Tableau. Proyek ini menganalisis data 1 juta+ transaksi.",
-      thumbnail: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
-      type: "pdf",
-      fileUrl: "#",
-      slides: [
-        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
-      ],
-    },
-  },
-  {
-    name: "Sinta Dewi",
-    role: "ML Engineer di Gojek",
-    batch: "Batch 8 - Bootcamp AI & Machine Learning",
-    content:
-      "Bootcamp-nya beda banget dari yang lain. Fokus ke praktik dan proyek nyata. Portfolio yang dibangun beneran membantu saat interview.",
-    photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop&crop=face",
-    portfolio: {
-      title: "Sentiment Analysis Model",
-      description:
-        "Model NLP untuk analisis sentimen review produk Indonesia dengan akurasi 92%. Menggunakan BERT dan fine-tuning untuk bahasa Indonesia.",
-      thumbnail: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=300&fit=crop",
-      type: "ppt",
-      fileUrl: "#",
-      slides: [
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-      ],
-    },
-  },
-  {
-    name: "Andi Firmansyah",
-    role: "Data Scientist Freelancer",
-    batch: "Batch 15 - Bootcamp Data Science",
-    content:
-      "Setelah ikut bootcamp, skill saya meningkat drastis. Sekarang sudah bisa handle project data science secara mandiri.",
-    photo: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
-    portfolio: {
-      title: "Customer Churn Prediction",
-      description:
-        "Model prediksi churn pelanggan dengan XGBoost dan feature engineering. Meningkatkan retensi pelanggan hingga 25%.",
-      thumbnail: "https://images.unsplash.com/photo-1551434678-e076c223a692?w=400&h=300&fit=crop",
-      type: "pdf",
-      fileUrl: "#",
-      slides: [
-        "https://images.unsplash.com/photo-1551434678-e076c223a692?w=801&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-      ],
-    },
-  },
-  {
-    name: "Maya Putri",
-    role: "Business Intelligence Analyst di Shopee",
-    batch: "Batch 10 - Bootcamp Data Science",
-    content:
-      "Mentor-mentornya sangat supportive dan materi yang diajarkan langsung applicable di dunia kerja. Highly recommended!",
-    photo: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
-    portfolio: {
-      title: "BI Dashboard for Retail",
-      description:
-        "Dashboard Business Intelligence untuk retail dengan Power BI dan SQL. Membantu decision making untuk 50+ toko.",
-      thumbnail: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
-      type: "ppt",
-      fileUrl: "#",
-      slides: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=800&h=600&fit=crop",
-      ],
-    },
-  },
-  {
-    name: "Budi Setiawan",
-    role: "AI Research Engineer di Startup AI",
-    batch: "Batch 5 - Bootcamp AI & Machine Learning",
-    content:
-      "Program job ready-nya benar-benar membantu. CV saya di-review, diajarin interview, sampai dapat koneksi ke hiring partners.",
-    photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-    portfolio: {
-      title: "Computer Vision for Quality Control",
-      description:
-        "Sistem deteksi cacat produk menggunakan Computer Vision dan Deep Learning. Akurasi 98% dengan processing real-time.",
-      thumbnail: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&h=300&fit=crop",
-      type: "pdf",
-      fileUrl: "#",
-      slides: [
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=800&h=600&fit=crop",
-      ],
-    },
-  },
-];
-
-// Import alumni logos from JSON file
-import alumniLogosData from "@/data/alumni-logos.json";
-
-const alumniCompanies = alumniLogosData.alumniLogos.map((logo) => ({
-  name: logo.name,
-  src: logo.logo,
+// Load testimonials from JSON
+const testimonials: Testimonial[] = testimonialsData.testimonials.map((t: any) => ({
+  id: t.id,
+  name: t.name,
+  role: t.role,
+  batch: t.batch,
+  content: t.content,
+  photo: t.photo,
+  portfolio: t.portfolio,
 }));
+
+
 
 const TestimonialSection = () => {
   const [selectedPortfolio, setSelectedPortfolio] = useState<Testimonial | null>(null);
