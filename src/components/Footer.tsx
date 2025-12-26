@@ -9,8 +9,8 @@ const Footer = () => {
   ];
 
   const programs = [
-    { label: "Bootcamp Online", href: "/bootcamp-online" },
-    { label: "Bootcamp Offline", href: "/bootcamp-offline" },
+    { label: "Bootcamp Online", href: "/bootcamp-data-science-online" },
+    { label: "Bootcamp Offline", href: "/bootcamp-data-science-offline" },
     { label: "Private Course", href: "/private-course" },
     { label: "Mini Bootcamp & Workshop", href: "/mini-bootcamp-workshop" },
     { label: "Corporate Training", href: "/corporate-training" },

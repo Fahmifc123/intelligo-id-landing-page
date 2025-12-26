@@ -17,7 +17,7 @@ const Navbar = () => {
       id: "bootcamp-online",
       title: "Bootcamp Online",
       description: "Belajar dari rumah dengan live class interaktif",
-      categoryHref: "/bootcamp-online",
+      categoryHref: "/bootcamp-data-science-online",
       items: [
         { title: "Bootcamp Malam (Weekday)", href: "/program/bootcamp-malam" },
         { title: "Weekend Bootcamp Online", href: "/program/bootcamp-weekend" },
@@ -28,7 +28,7 @@ const Navbar = () => {
       id: "bootcamp-offline",
       title: "Bootcamp Offline",
       description: "Tatap muka intensif dengan praktik langsung di Jakarta & Bandung",
-      categoryHref: "/bootcamp-offline",
+      categoryHref: "/bootcamp-data-science-offline",
       items: [
         { title: "Weekend Bootcamp Offline", href: "/program/bootcamp-offline" },
         { title: "Weekday Bootcamp Offline", href: "/program/bootcamp-weekday" },
